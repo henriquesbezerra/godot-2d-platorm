@@ -20,11 +20,19 @@ var knockback_intensiy = 300
 
 func _physics_process(delta):
 	velocity.y += gravity * delta
+	velocity.x = 0
 	
-	_get_input()
+	if !hurted:
+		_get_input()
+	
 	velocity = move_and_slide(velocity, UP)
 	
 	_set_animation()
+	
+	for platforms in get_slide_count():
+		var collision = get_slide_collision(platforms)
+		if collision.collider.has_method("collide_with"):
+			collision.collider.collide_with(collision, self)
   
 func _get_input():
 	velocity.x = 0
