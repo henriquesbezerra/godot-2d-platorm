@@ -13,10 +13,19 @@ var gravity = 1200
 # Força de pulo é invertida pq na godot os eixos são invertidos
 var jump_force = -720
 
-var health = 3
+var player_health = 3
+var max_health = 3
+
 var hurted = false
 var knockback_dir = 1
 var knockback_intensiy = 300
+
+signal change_life(health)
+
+func _ready():
+	var node_lifes = get_parent().get_node("HUD/HBoxContainer/ControlLifes")
+	connect("change_life", node_lifes, "_on_change_life")
+	emit_signal("change_life", max_health)
 
 func _physics_process(delta):
 	velocity.y += gravity * delta
@@ -70,13 +79,14 @@ func knockback():
 	velocity = move_and_slide(velocity)
 	
 func _on_Area2DHurtBox_body_entered(body):
-	health -= 1
+	player_health -= 1
 	hurted = true
+	emit_signal("change_life", player_health)
 	knockback()
 	get_node("Area2DHurtBox/CollisionShape2D").set_deferred("disabled", true)
 	yield(get_tree().create_timer(0.5),"timeout")
 	get_node("Area2DHurtBox/CollisionShape2D").set_deferred("disabled", false)
 	hurted = false
-	if health < 1:
+	if player_health < 1:
 		queue_free()
 		get_tree().reload_current_scene()
