@@ -18,7 +18,7 @@ var max_health = 3
 
 var hurted = false
 var knockback_dir = 1
-var knockback_intensiy = 300
+var knockback_intensiy = 500
 
 signal change_life(health)
 
@@ -26,6 +26,7 @@ func _ready():
 	var node_lifes = get_parent().get_node("HUD/HBoxContainer/ControlLifes")
 	connect("change_life", node_lifes, "_on_change_life")
 	emit_signal("change_life", max_health)
+	position.x = Global.checkopoint_pos + 50	
 
 func _physics_process(delta):
 	velocity.y += gravity * delta
@@ -52,6 +53,7 @@ func _get_input():
 	if move_direction != 0:
 		$Sprite.scale.x = move_direction
 		knockback_dir = move_direction
+		$Particles2D.scale.x = move_direction
 	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("jump") and is_on_floor():
@@ -64,7 +66,8 @@ func _set_animation():
 		anim = "jump"
 	elif velocity.x != 0:
 		anim = "run"
-
+		$Particles2D.emitting = true
+	
 	if velocity.y > 0 and !is_on_floor():
 		anim = "falling"
 
@@ -75,7 +78,10 @@ func _set_animation():
 		$AnimationPlayer.play(anim)
 
 func knockback():
-	velocity.x = -knockback_dir * knockback_intensiy
+	if $colissions_knockback/left.is_colliding():
+		velocity.x = knockback_dir * knockback_intensiy
+	elif $colissions_knockback/right.is_colliding():
+		velocity.x = -knockback_dir * knockback_intensiy
 	velocity = move_and_slide(velocity)
 	
 func _on_Area2DHurtBox_body_entered(body):
@@ -90,3 +96,6 @@ func _on_Area2DHurtBox_body_entered(body):
 	if player_health < 1:
 		queue_free()
 		get_tree().reload_current_scene()
+
+func hit_checkpoint():
+	Global.checkopoint_pos = position.x

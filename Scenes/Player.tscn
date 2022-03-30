@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Main Characters/Virtual Guy/Idle (32x32).png" type="Texture" id=2]
@@ -6,6 +6,35 @@
 [ext_resource path="res://Assets/Main Characters/Virtual Guy/Jump (32x32).png" type="Texture" id=4]
 [ext_resource path="res://Assets/Main Characters/Virtual Guy/Fall (32x32).png" type="Texture" id=5]
 [ext_resource path="res://Assets/Main Characters/Virtual Guy/Hit (32x32).png" type="Texture" id=6]
+[ext_resource path="res://Assets/Other/Dust Particle.png" type="Texture" id=7]
+
+[sub_resource type="Gradient" id=9]
+offsets = PoolRealArray( 0, 0.314286, 1 )
+colors = PoolColorArray( 0.721569, 0.698039, 0.67451, 0.890196, 1, 1, 1, 0.329412, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=10]
+gradient = SubResource( 9 )
+
+[sub_resource type="Curve" id=11]
+_data = [ Vector2( 0.00858369, 0.168182 ), 0.0, -0.106979, 0, 0, Vector2( 1, 1 ), -0.0129157, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=12]
+curve = SubResource( 11 )
+
+[sub_resource type="ParticlesMaterial" id=13]
+lifetime_randomness = 0.1
+flag_disable_z = true
+direction = Vector3( -1, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, -100, 0 )
+initial_velocity = 50.0
+initial_velocity_random = 0.5
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 1.5
+scale_random = 0.8
+scale_curve = SubResource( 12 )
+color_ramp = SubResource( 10 )
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -256,6 +285,15 @@ extents = Vector2( 11, 9.25 )
 collision_mask = 24
 script = ExtResource( 1 )
 
+[node name="Particles2D" type="Particles2D" parent="."]
+position = Vector2( -3, -1 )
+emitting = false
+lifetime = 0.4
+one_shot = true
+randomness = 0.5
+process_material = SubResource( 13 )
+texture = ExtResource( 7 )
+
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -16 )
 texture = ExtResource( 2 )
@@ -271,10 +309,12 @@ anims/jump = SubResource( 4 )
 anims/run = SubResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 0, -11.5 )
 shape = SubResource( 3 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
+visible = false
 position = Vector2( 0, -3 )
 scale = Vector2( 0.7, 0.7 )
 enabled = true
@@ -282,6 +322,7 @@ cast_to = Vector2( 0, 5 )
 collision_mask = 0
 
 [node name="Camera2D" type="Camera2D" parent="."]
+visible = false
 position = Vector2( 0, -9 )
 current = true
 limit_left = -32
@@ -298,6 +339,7 @@ drag_margin_bottom = 0.3
 editor_draw_screen = false
 
 [node name="Area2DHurtBox" type="Area2D" parent="."]
+visible = false
 modulate = Color( 128.498, 0.0196078, 0, 1 )
 position = Vector2( 0, -9 )
 collision_mask = 2
@@ -305,5 +347,20 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DHurtBox"]
 position = Vector2( 0, -6 )
 shape = SubResource( 8 )
+
+[node name="colissions_knockback" type="Node2D" parent="."]
+visible = false
+
+[node name="left" type="RayCast2D" parent="colissions_knockback"]
+position = Vector2( 0, -12 )
+enabled = true
+cast_to = Vector2( -16, 0 )
+collision_mask = 2
+
+[node name="right" type="RayCast2D" parent="colissions_knockback"]
+position = Vector2( 0, -12 )
+enabled = true
+cast_to = Vector2( 16, 0 )
+collision_mask = 2
 
 [connection signal="body_entered" from="Area2DHurtBox" to="." method="_on_Area2DHurtBox_body_entered"]

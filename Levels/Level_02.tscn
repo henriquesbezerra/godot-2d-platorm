@@ -1,29 +1,28 @@
-[gd_scene load_steps=100 format=2]
+[gd_scene load_steps=99 format=2]
 
-[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Assets/Terrain/1 - Foreground_scenery.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Terrain/Terrain (16x16).png" type="Texture" id=3]
-[ext_resource path="res://Assets/Terrain/2 - Hills.png" type="Texture" id=4]
-[ext_resource path="res://Assets/Terrain/3 - Cloud_cover_1.png" type="Texture" id=5]
-[ext_resource path="res://Assets/Terrain/4 - Cloud_cover_2.png" type="Texture" id=6]
-[ext_resource path="res://Assets/Terrain/5 - Sky_color.png" type="Texture" id=7]
-[ext_resource path="res://Scripts/fall-zone.gd" type="Script" id=8]
-[ext_resource path="res://Items/Apple.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Items/Banana.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Items/Cherry.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Items/Kiwi.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Items/Melon.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Items/Orange.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Items/Pineapple.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Items/Strawberry.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Enemies/Mushroom.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Prefabs/FallingPlatform.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Prefabs/MovingPlatform.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Scripts/Reset_Level.gd" type="Script" id=20]
-[ext_resource path="res://Prefabs/HUD.tscn" type="PackedScene" id=21]
-[ext_resource path="res://Prefabs/Checkpoint.tscn" type="PackedScene" id=22]
-[ext_resource path="res://Prefabs/Goal.tscn" type="PackedScene" id=23]
-[ext_resource path="res://Prefabs/Transition_In.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Items/Melon.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Items/Banana.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/Checkpoint.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/MovingPlatform.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/Transition_In.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/Transition_Out.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Prefabs/Goal.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Prefabs/HUD.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Enemies/Mushroom.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Prefabs/FallingPlatform.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Items/Apple.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Items/Cherry.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Items/Kiwi.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Items/Orange.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scripts/fall-zone.gd" type="Script" id=16]
+[ext_resource path="res://Scripts/Reset_Level.gd" type="Script" id=17]
+[ext_resource path="res://Assets/Terrain/1 - Foreground_scenery.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Terrain/2 - Hills.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Terrain/4 - Cloud_cover_2.png" type="Texture" id=20]
+[ext_resource path="res://Assets/Terrain/5 - Sky_color.png" type="Texture" id=21]
+[ext_resource path="res://Assets/Terrain/3 - Cloud_cover_1.png" type="Texture" id=22]
+[ext_resource path="res://Assets/Terrain/Terrain (16x16).png" type="Texture" id=23]
 
 [sub_resource type="ConvexPolygonShape2D" id=5]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -240,7 +239,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="TileSet" id=4]
 0/name = "01"
-0/texture = ExtResource( 3 )
+0/texture = ExtResource( 23 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 16, 16 )
@@ -267,7 +266,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 0/z_index = 0
 1/name = "02"
-1/texture = ExtResource( 3 )
+1/texture = ExtResource( 23 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 16, 0, 16, 16 )
@@ -294,7 +293,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 1/z_index = 0
 2/name = "03"
-2/texture = ExtResource( 3 )
+2/texture = ExtResource( 23 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 32, 0, 16, 16 )
@@ -321,7 +320,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 2/z_index = 0
 3/name = "04"
-3/texture = ExtResource( 3 )
+3/texture = ExtResource( 23 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 0, 16, 16, 16 )
@@ -348,7 +347,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 3/z_index = 0
 4/name = "05"
-4/texture = ExtResource( 3 )
+4/texture = ExtResource( 23 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 16, 16, 16, 16 )
@@ -362,7 +361,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 4/shapes = [  ]
 4/z_index = 0
 5/name = "06"
-5/texture = ExtResource( 3 )
+5/texture = ExtResource( 23 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 32, 16, 16, 16 )
@@ -389,7 +388,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 5/z_index = 0
 6/name = "07"
-6/texture = ExtResource( 3 )
+6/texture = ExtResource( 23 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 0, 32, 16, 16 )
@@ -416,7 +415,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 6/z_index = 0
 7/name = "08"
-7/texture = ExtResource( 3 )
+7/texture = ExtResource( 23 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 16, 32, 16, 16 )
@@ -443,7 +442,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 7/z_index = 0
 8/name = "09"
-8/texture = ExtResource( 3 )
+8/texture = ExtResource( 23 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 32, 32, 16, 16 )
@@ -470,7 +469,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 8/z_index = 0
 9/name = "10"
-9/texture = ExtResource( 3 )
+9/texture = ExtResource( 23 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 48, 0, 16, 16 )
@@ -497,7 +496,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 9/z_index = 0
 10/name = "11"
-10/texture = ExtResource( 3 )
+10/texture = ExtResource( 23 )
 10/tex_offset = Vector2( 0, 0 )
 10/modulate = Color( 1, 1, 1, 1 )
 10/region = Rect2( 64, 0, 16, 16 )
@@ -524,7 +523,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 10/z_index = 0
 11/name = "12"
-11/texture = ExtResource( 3 )
+11/texture = ExtResource( 23 )
 11/tex_offset = Vector2( 0, 0 )
 11/modulate = Color( 1, 1, 1, 1 )
 11/region = Rect2( 48, 16, 16, 16 )
@@ -551,7 +550,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 11/z_index = 0
 12/name = "13"
-12/texture = ExtResource( 3 )
+12/texture = ExtResource( 23 )
 12/tex_offset = Vector2( 0, 0 )
 12/modulate = Color( 1, 1, 1, 1 )
 12/region = Rect2( 64, 16, 16, 16 )
@@ -578,7 +577,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 12/z_index = 0
 13/name = "14"
-13/texture = ExtResource( 3 )
+13/texture = ExtResource( 23 )
 13/tex_offset = Vector2( 0, 0 )
 13/modulate = Color( 1, 1, 1, 1 )
 13/region = Rect2( 96, 0, 16, 16 )
@@ -599,7 +598,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 13/z_index = 0
 14/name = "15"
-14/texture = ExtResource( 3 )
+14/texture = ExtResource( 23 )
 14/tex_offset = Vector2( 0, 0 )
 14/modulate = Color( 1, 1, 1, 1 )
 14/region = Rect2( 112, 0, 16, 16 )
@@ -620,7 +619,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 14/z_index = 0
 15/name = "16"
-15/texture = ExtResource( 3 )
+15/texture = ExtResource( 23 )
 15/tex_offset = Vector2( 0, 0 )
 15/modulate = Color( 1, 1, 1, 1 )
 15/region = Rect2( 128, 0, 16, 16 )
@@ -641,7 +640,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 15/z_index = 0
 16/name = "17"
-16/texture = ExtResource( 3 )
+16/texture = ExtResource( 23 )
 16/tex_offset = Vector2( 0, 0 )
 16/modulate = Color( 1, 1, 1, 1 )
 16/region = Rect2( 96, 16, 16, 16 )
@@ -655,7 +654,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 16/shapes = [  ]
 16/z_index = 0
 17/name = "18"
-17/texture = ExtResource( 3 )
+17/texture = ExtResource( 23 )
 17/tex_offset = Vector2( 0, 0 )
 17/modulate = Color( 1, 1, 1, 1 )
 17/region = Rect2( 112, 16, 16, 16 )
@@ -669,7 +668,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 17/shapes = [  ]
 17/z_index = 0
 18/name = "19"
-18/texture = ExtResource( 3 )
+18/texture = ExtResource( 23 )
 18/tex_offset = Vector2( 0, 0 )
 18/modulate = Color( 1, 1, 1, 1 )
 18/region = Rect2( 128, 16, 16, 16 )
@@ -683,7 +682,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 18/shapes = [  ]
 18/z_index = 0
 19/name = "20"
-19/texture = ExtResource( 3 )
+19/texture = ExtResource( 23 )
 19/tex_offset = Vector2( 0, 0 )
 19/modulate = Color( 1, 1, 1, 1 )
 19/region = Rect2( 96, 32, 16, 16 )
@@ -697,7 +696,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 19/shapes = [  ]
 19/z_index = 0
 20/name = "21"
-20/texture = ExtResource( 3 )
+20/texture = ExtResource( 23 )
 20/tex_offset = Vector2( 0, 0 )
 20/modulate = Color( 1, 1, 1, 1 )
 20/region = Rect2( 112, 32, 16, 16 )
@@ -711,7 +710,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 20/shapes = [  ]
 20/z_index = 0
 21/name = "22"
-21/texture = ExtResource( 3 )
+21/texture = ExtResource( 23 )
 21/tex_offset = Vector2( 0, 0 )
 21/modulate = Color( 1, 1, 1, 1 )
 21/region = Rect2( 128, 32, 16, 16 )
@@ -725,7 +724,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 21/shapes = [  ]
 21/z_index = 0
 22/name = "23"
-22/texture = ExtResource( 3 )
+22/texture = ExtResource( 23 )
 22/tex_offset = Vector2( 0, 0 )
 22/modulate = Color( 1, 1, 1, 1 )
 22/region = Rect2( 144, 0, 16, 16 )
@@ -739,7 +738,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 22/shapes = [  ]
 22/z_index = 0
 23/name = "24"
-23/texture = ExtResource( 3 )
+23/texture = ExtResource( 23 )
 23/tex_offset = Vector2( 0, 0 )
 23/modulate = Color( 1, 1, 1, 1 )
 23/region = Rect2( 160, 0, 16, 16 )
@@ -753,7 +752,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 23/shapes = [  ]
 23/z_index = 0
 24/name = "25"
-24/texture = ExtResource( 3 )
+24/texture = ExtResource( 23 )
 24/tex_offset = Vector2( 0, 0 )
 24/modulate = Color( 1, 1, 1, 1 )
 24/region = Rect2( 144, 16, 16, 16 )
@@ -767,7 +766,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 24/shapes = [  ]
 24/z_index = 0
 25/name = "26"
-25/texture = ExtResource( 3 )
+25/texture = ExtResource( 23 )
 25/tex_offset = Vector2( 0, 0 )
 25/modulate = Color( 1, 1, 1, 1 )
 25/region = Rect2( 160, 16, 16, 16 )
@@ -781,7 +780,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 25/shapes = [  ]
 25/z_index = 0
 26/name = "Terrain (16x16).png 26"
-26/texture = ExtResource( 3 )
+26/texture = ExtResource( 23 )
 26/tex_offset = Vector2( 0, 0 )
 26/modulate = Color( 1, 1, 1, 1 )
 26/region = Rect2( 192, 0, 16, 16 )
@@ -802,7 +801,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 26/z_index = 0
 27/name = "Terrain (16x16).png 27"
-27/texture = ExtResource( 3 )
+27/texture = ExtResource( 23 )
 27/tex_offset = Vector2( 0, 0 )
 27/modulate = Color( 1, 1, 1, 1 )
 27/region = Rect2( 208, 0, 16, 16 )
@@ -823,7 +822,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 27/z_index = 0
 28/name = "Terrain (16x16).png 28"
-28/texture = ExtResource( 3 )
+28/texture = ExtResource( 23 )
 28/tex_offset = Vector2( 0, 0 )
 28/modulate = Color( 1, 1, 1, 1 )
 28/region = Rect2( 224, 0, 16, 16 )
@@ -844,7 +843,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 28/z_index = 0
 29/name = "Terrain (16x16).png 29"
-29/texture = ExtResource( 3 )
+29/texture = ExtResource( 23 )
 29/tex_offset = Vector2( 0, 0 )
 29/modulate = Color( 1, 1, 1, 1 )
 29/region = Rect2( 192, 16, 16, 16 )
@@ -865,7 +864,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 29/z_index = 0
 30/name = "Terrain (16x16).png 30"
-30/texture = ExtResource( 3 )
+30/texture = ExtResource( 23 )
 30/tex_offset = Vector2( 0, 0 )
 30/modulate = Color( 1, 1, 1, 1 )
 30/region = Rect2( 208, 16, 16, 16 )
@@ -879,7 +878,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 30/shapes = [  ]
 30/z_index = 0
 31/name = "Terrain (16x16).png 31"
-31/texture = ExtResource( 3 )
+31/texture = ExtResource( 23 )
 31/tex_offset = Vector2( 0, 0 )
 31/modulate = Color( 1, 1, 1, 1 )
 31/region = Rect2( 224, 16, 16, 16 )
@@ -893,7 +892,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 31/shapes = [  ]
 31/z_index = 0
 32/name = "Terrain (16x16).png 32"
-32/texture = ExtResource( 3 )
+32/texture = ExtResource( 23 )
 32/tex_offset = Vector2( 0, 0 )
 32/modulate = Color( 1, 1, 1, 1 )
 32/region = Rect2( 208, 32, 16, 16 )
@@ -907,7 +906,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 32/shapes = [  ]
 32/z_index = 0
 33/name = "Terrain (16x16).png 33"
-33/texture = ExtResource( 3 )
+33/texture = ExtResource( 23 )
 33/tex_offset = Vector2( 0, 0 )
 33/modulate = Color( 1, 1, 1, 1 )
 33/region = Rect2( 224, 32, 16, 16 )
@@ -921,7 +920,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 33/shapes = [  ]
 33/z_index = 0
 34/name = "Terrain (16x16).png 34"
-34/texture = ExtResource( 3 )
+34/texture = ExtResource( 23 )
 34/tex_offset = Vector2( 0, 0 )
 34/modulate = Color( 1, 1, 1, 1 )
 34/region = Rect2( 240, 0, 16, 16 )
@@ -942,7 +941,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 34/z_index = 0
 35/name = "Terrain (16x16).png 35"
-35/texture = ExtResource( 3 )
+35/texture = ExtResource( 23 )
 35/tex_offset = Vector2( 0, 0 )
 35/modulate = Color( 1, 1, 1, 1 )
 35/region = Rect2( 240, 16, 16, 16 )
@@ -963,7 +962,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 35/z_index = 0
 36/name = "Terrain (16x16).png 36"
-36/texture = ExtResource( 3 )
+36/texture = ExtResource( 23 )
 36/tex_offset = Vector2( 0, 0 )
 36/modulate = Color( 1, 1, 1, 1 )
 36/region = Rect2( 240, 32, 16, 16 )
@@ -984,7 +983,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 36/z_index = 0
 37/name = "plat-1-1"
-37/texture = ExtResource( 3 )
+37/texture = ExtResource( 23 )
 37/tex_offset = Vector2( 0, 0 )
 37/modulate = Color( 1, 1, 1, 1 )
 37/region = Rect2( 272, 0, 16, 16 )
@@ -1005,7 +1004,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 37/z_index = 0
 38/name = "plat-1-2"
-38/texture = ExtResource( 3 )
+38/texture = ExtResource( 23 )
 38/tex_offset = Vector2( 0, 0 )
 38/modulate = Color( 1, 1, 1, 1 )
 38/region = Rect2( 288, 0, 16, 16 )
@@ -1026,7 +1025,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 38/z_index = 0
 39/name = "plat-1-3"
-39/texture = ExtResource( 3 )
+39/texture = ExtResource( 23 )
 39/tex_offset = Vector2( 0, 0 )
 39/modulate = Color( 1, 1, 1, 1 )
 39/region = Rect2( 304, 0, 16, 16 )
@@ -1047,7 +1046,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 39/z_index = 0
 40/name = "plat-2-1"
-40/texture = ExtResource( 3 )
+40/texture = ExtResource( 23 )
 40/tex_offset = Vector2( 0, 0 )
 40/modulate = Color( 1, 1, 1, 1 )
 40/region = Rect2( 272, 16, 16, 16 )
@@ -1068,7 +1067,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 40/z_index = 0
 41/name = "plat-2-2"
-41/texture = ExtResource( 3 )
+41/texture = ExtResource( 23 )
 41/tex_offset = Vector2( 0, 0 )
 41/modulate = Color( 1, 1, 1, 1 )
 41/region = Rect2( 288, 16, 16, 16 )
@@ -1089,7 +1088,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 41/z_index = 0
 42/name = "plat-2-3"
-42/texture = ExtResource( 3 )
+42/texture = ExtResource( 23 )
 42/tex_offset = Vector2( 0, 0 )
 42/modulate = Color( 1, 1, 1, 1 )
 42/region = Rect2( 304, 16, 16, 16 )
@@ -1110,7 +1109,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 42/z_index = 0
 43/name = "plat-3-1"
-43/texture = ExtResource( 3 )
+43/texture = ExtResource( 23 )
 43/tex_offset = Vector2( 0, 0 )
 43/modulate = Color( 1, 1, 1, 1 )
 43/region = Rect2( 272, 32, 16, 16 )
@@ -1131,7 +1130,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 43/z_index = 0
 44/name = "plat-3-2"
-44/texture = ExtResource( 3 )
+44/texture = ExtResource( 23 )
 44/tex_offset = Vector2( 0, 0 )
 44/modulate = Color( 1, 1, 1, 1 )
 44/region = Rect2( 288, 32, 16, 16 )
@@ -1152,7 +1151,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 44/z_index = 0
 45/name = "plat-3-3"
-45/texture = ExtResource( 3 )
+45/texture = ExtResource( 23 )
 45/tex_offset = Vector2( 0, 0 )
 45/modulate = Color( 1, 1, 1, 1 )
 45/region = Rect2( 304, 32, 16, 16 )
@@ -1173,7 +1172,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 45/z_index = 0
 46/name = "Terrain (16x16).png 46"
-46/texture = ExtResource( 3 )
+46/texture = ExtResource( 23 )
 46/tex_offset = Vector2( 0, 0 )
 46/modulate = Color( 1, 1, 1, 1 )
 46/region = Rect2( 0, 64, 16, 16 )
@@ -1187,7 +1186,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 46/shapes = [  ]
 46/z_index = 0
 47/name = "Terrain (16x16).png 47"
-47/texture = ExtResource( 3 )
+47/texture = ExtResource( 23 )
 47/tex_offset = Vector2( 0, 0 )
 47/modulate = Color( 1, 1, 1, 1 )
 47/region = Rect2( 16, 64, 16, 16 )
@@ -1201,7 +1200,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 47/shapes = [  ]
 47/z_index = 0
 48/name = "Terrain (16x16).png 48"
-48/texture = ExtResource( 3 )
+48/texture = ExtResource( 23 )
 48/tex_offset = Vector2( 0, 0 )
 48/modulate = Color( 1, 1, 1, 1 )
 48/region = Rect2( 32, 64, 16, 16 )
@@ -1215,7 +1214,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 48/shapes = [  ]
 48/z_index = 0
 49/name = "Terrain (16x16).png 49"
-49/texture = ExtResource( 3 )
+49/texture = ExtResource( 23 )
 49/tex_offset = Vector2( 0, 0 )
 49/modulate = Color( 1, 1, 1, 1 )
 49/region = Rect2( 0, 80, 16, 16 )
@@ -1229,7 +1228,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 49/shapes = [  ]
 49/z_index = 0
 50/name = "Terrain (16x16).png 50"
-50/texture = ExtResource( 3 )
+50/texture = ExtResource( 23 )
 50/tex_offset = Vector2( 0, 0 )
 50/modulate = Color( 1, 1, 1, 1 )
 50/region = Rect2( 16, 80, 16, 16 )
@@ -1243,7 +1242,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 50/shapes = [  ]
 50/z_index = 0
 51/name = "Terrain (16x16).png 51"
-51/texture = ExtResource( 3 )
+51/texture = ExtResource( 23 )
 51/tex_offset = Vector2( 0, 0 )
 51/modulate = Color( 1, 1, 1, 1 )
 51/region = Rect2( 32, 80, 16, 16 )
@@ -1257,7 +1256,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 51/shapes = [  ]
 51/z_index = 0
 52/name = "Terrain (16x16).png 52"
-52/texture = ExtResource( 3 )
+52/texture = ExtResource( 23 )
 52/tex_offset = Vector2( 0, 0 )
 52/modulate = Color( 1, 1, 1, 1 )
 52/region = Rect2( 0, 96, 16, 16 )
@@ -1271,7 +1270,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 52/shapes = [  ]
 52/z_index = 0
 53/name = "Terrain (16x16).png 53"
-53/texture = ExtResource( 3 )
+53/texture = ExtResource( 23 )
 53/tex_offset = Vector2( 0, 0 )
 53/modulate = Color( 1, 1, 1, 1 )
 53/region = Rect2( 16, 96, 16, 16 )
@@ -1285,7 +1284,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 53/shapes = [  ]
 53/z_index = 0
 54/name = "Terrain (16x16).png 54"
-54/texture = ExtResource( 3 )
+54/texture = ExtResource( 23 )
 54/tex_offset = Vector2( 0, 0 )
 54/modulate = Color( 1, 1, 1, 1 )
 54/region = Rect2( 32, 96, 16, 16 )
@@ -1299,7 +1298,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 54/shapes = [  ]
 54/z_index = 0
 55/name = "Terrain (16x16).png 55"
-55/texture = ExtResource( 3 )
+55/texture = ExtResource( 23 )
 55/tex_offset = Vector2( 0, 0 )
 55/modulate = Color( 1, 1, 1, 1 )
 55/region = Rect2( 48, 64, 16, 16 )
@@ -1313,7 +1312,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 55/shapes = [  ]
 55/z_index = 0
 56/name = "Terrain (16x16).png 56"
-56/texture = ExtResource( 3 )
+56/texture = ExtResource( 23 )
 56/tex_offset = Vector2( 0, 0 )
 56/modulate = Color( 1, 1, 1, 1 )
 56/region = Rect2( 64, 64, 16, 16 )
@@ -1327,7 +1326,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 56/shapes = [  ]
 56/z_index = 0
 57/name = "Terrain (16x16).png 57"
-57/texture = ExtResource( 3 )
+57/texture = ExtResource( 23 )
 57/tex_offset = Vector2( 0, 0 )
 57/modulate = Color( 1, 1, 1, 1 )
 57/region = Rect2( 48, 80, 16, 16 )
@@ -1341,7 +1340,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 57/shapes = [  ]
 57/z_index = 0
 58/name = "Terrain (16x16).png 58"
-58/texture = ExtResource( 3 )
+58/texture = ExtResource( 23 )
 58/tex_offset = Vector2( 0, 0 )
 58/modulate = Color( 1, 1, 1, 1 )
 58/region = Rect2( 64, 80, 16, 16 )
@@ -1355,7 +1354,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 58/shapes = [  ]
 58/z_index = 0
 59/name = "Terrain (16x16).png 59"
-59/texture = ExtResource( 3 )
+59/texture = ExtResource( 23 )
 59/tex_offset = Vector2( 0, 0 )
 59/modulate = Color( 1, 1, 1, 1 )
 59/region = Rect2( 96, 64, 16, 16 )
@@ -1382,7 +1381,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 59/z_index = 0
 60/name = "Terrain (16x16).png 60"
-60/texture = ExtResource( 3 )
+60/texture = ExtResource( 23 )
 60/tex_offset = Vector2( 0, 0 )
 60/modulate = Color( 1, 1, 1, 1 )
 60/region = Rect2( 112, 64, 16, 16 )
@@ -1409,7 +1408,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 60/z_index = 0
 61/name = "Terrain (16x16).png 61"
-61/texture = ExtResource( 3 )
+61/texture = ExtResource( 23 )
 61/tex_offset = Vector2( 0, 0 )
 61/modulate = Color( 1, 1, 1, 1 )
 61/region = Rect2( 128, 64, 16, 16 )
@@ -1436,7 +1435,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 61/z_index = 0
 62/name = "Terrain (16x16).png 62"
-62/texture = ExtResource( 3 )
+62/texture = ExtResource( 23 )
 62/tex_offset = Vector2( 0, 0 )
 62/modulate = Color( 1, 1, 1, 1 )
 62/region = Rect2( 96, 80, 16, 16 )
@@ -1457,7 +1456,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 62/z_index = 0
 63/name = "Terrain (16x16).png 63"
-63/texture = ExtResource( 3 )
+63/texture = ExtResource( 23 )
 63/tex_offset = Vector2( 0, 0 )
 63/modulate = Color( 1, 1, 1, 1 )
 63/region = Rect2( 112, 80, 16, 16 )
@@ -1471,7 +1470,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 63/shapes = [  ]
 63/z_index = 0
 64/name = "Terrain (16x16).png 64"
-64/texture = ExtResource( 3 )
+64/texture = ExtResource( 23 )
 64/tex_offset = Vector2( 0, 0 )
 64/modulate = Color( 1, 1, 1, 1 )
 64/region = Rect2( 128, 80, 16, 16 )
@@ -1492,7 +1491,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 64/z_index = 0
 65/name = "Terrain (16x16).png 65"
-65/texture = ExtResource( 3 )
+65/texture = ExtResource( 23 )
 65/tex_offset = Vector2( 0, 0 )
 65/modulate = Color( 1, 1, 1, 1 )
 65/region = Rect2( 96, 96, 16, 16 )
@@ -1513,7 +1512,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 65/z_index = 0
 66/name = "Terrain (16x16).png 66"
-66/texture = ExtResource( 3 )
+66/texture = ExtResource( 23 )
 66/tex_offset = Vector2( 0, 0 )
 66/modulate = Color( 1, 1, 1, 1 )
 66/region = Rect2( 112, 96, 16, 16 )
@@ -1527,7 +1526,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 66/shapes = [  ]
 66/z_index = 0
 67/name = "Terrain (16x16).png 67"
-67/texture = ExtResource( 3 )
+67/texture = ExtResource( 23 )
 67/tex_offset = Vector2( 0, 0 )
 67/modulate = Color( 1, 1, 1, 1 )
 67/region = Rect2( 128, 96, 16, 16 )
@@ -1548,7 +1547,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 67/z_index = 0
 68/name = "Terrain (16x16).png 68"
-68/texture = ExtResource( 3 )
+68/texture = ExtResource( 23 )
 68/tex_offset = Vector2( 0, 0 )
 68/modulate = Color( 1, 1, 1, 1 )
 68/region = Rect2( 144, 64, 16, 16 )
@@ -1562,7 +1561,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 68/shapes = [  ]
 68/z_index = 0
 69/name = "Terrain (16x16).png 69"
-69/texture = ExtResource( 3 )
+69/texture = ExtResource( 23 )
 69/tex_offset = Vector2( 0, 0 )
 69/modulate = Color( 1, 1, 1, 1 )
 69/region = Rect2( 160, 64, 16, 16 )
@@ -1576,7 +1575,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 69/shapes = [  ]
 69/z_index = 0
 70/name = "Terrain (16x16).png 70"
-70/texture = ExtResource( 3 )
+70/texture = ExtResource( 23 )
 70/tex_offset = Vector2( 0, 0 )
 70/modulate = Color( 1, 1, 1, 1 )
 70/region = Rect2( 144, 80, 16, 16 )
@@ -1597,7 +1596,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 70/z_index = 0
 71/name = "Terrain (16x16).png 71"
-71/texture = ExtResource( 3 )
+71/texture = ExtResource( 23 )
 71/tex_offset = Vector2( 0, 0 )
 71/modulate = Color( 1, 1, 1, 1 )
 71/region = Rect2( 160, 80, 16, 16 )
@@ -1618,7 +1617,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 71/z_index = 0
 72/name = "Terrain (16x16).png 72"
-72/texture = ExtResource( 3 )
+72/texture = ExtResource( 23 )
 72/tex_offset = Vector2( 0, 0 )
 72/modulate = Color( 1, 1, 1, 1 )
 72/region = Rect2( 192, 64, 16, 16 )
@@ -1632,7 +1631,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 72/shapes = [  ]
 72/z_index = 0
 73/name = "Terrain (16x16).png 73"
-73/texture = ExtResource( 3 )
+73/texture = ExtResource( 23 )
 73/tex_offset = Vector2( 0, 0 )
 73/modulate = Color( 1, 1, 1, 1 )
 73/region = Rect2( 208, 64, 16, 16 )
@@ -1646,7 +1645,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 73/shapes = [  ]
 73/z_index = 0
 74/name = "Terrain (16x16).png 74"
-74/texture = ExtResource( 3 )
+74/texture = ExtResource( 23 )
 74/tex_offset = Vector2( 0, 0 )
 74/modulate = Color( 1, 1, 1, 1 )
 74/region = Rect2( 224, 64, 16, 16 )
@@ -1660,7 +1659,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 74/shapes = [  ]
 74/z_index = 0
 75/name = "Terrain (16x16).png 75"
-75/texture = ExtResource( 3 )
+75/texture = ExtResource( 23 )
 75/tex_offset = Vector2( 0, 0 )
 75/modulate = Color( 1, 1, 1, 1 )
 75/region = Rect2( 192, 80, 16, 16 )
@@ -1674,7 +1673,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 75/shapes = [  ]
 75/z_index = 0
 76/name = "Terrain (16x16).png 76"
-76/texture = ExtResource( 3 )
+76/texture = ExtResource( 23 )
 76/tex_offset = Vector2( 0, 0 )
 76/modulate = Color( 1, 1, 1, 1 )
 76/region = Rect2( 208, 80, 16, 16 )
@@ -1688,7 +1687,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 76/shapes = [  ]
 76/z_index = 0
 77/name = "Terrain (16x16).png 77"
-77/texture = ExtResource( 3 )
+77/texture = ExtResource( 23 )
 77/tex_offset = Vector2( 0, 0 )
 77/modulate = Color( 1, 1, 1, 1 )
 77/region = Rect2( 224, 80, 16, 16 )
@@ -1702,7 +1701,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 77/shapes = [  ]
 77/z_index = 0
 78/name = "Terrain (16x16).png 78"
-78/texture = ExtResource( 3 )
+78/texture = ExtResource( 23 )
 78/tex_offset = Vector2( 0, 0 )
 78/modulate = Color( 1, 1, 1, 1 )
 78/region = Rect2( 208, 96, 16, 16 )
@@ -1716,7 +1715,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 78/shapes = [  ]
 78/z_index = 0
 79/name = "Terrain (16x16).png 79"
-79/texture = ExtResource( 3 )
+79/texture = ExtResource( 23 )
 79/tex_offset = Vector2( 0, 0 )
 79/modulate = Color( 1, 1, 1, 1 )
 79/region = Rect2( 224, 96, 16, 16 )
@@ -1730,7 +1729,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 79/shapes = [  ]
 79/z_index = 0
 80/name = "Terrain (16x16).png 80"
-80/texture = ExtResource( 3 )
+80/texture = ExtResource( 23 )
 80/tex_offset = Vector2( 0, 0 )
 80/modulate = Color( 1, 1, 1, 1 )
 80/region = Rect2( 240, 64, 16, 16 )
@@ -1744,7 +1743,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 80/shapes = [  ]
 80/z_index = 0
 81/name = "Terrain (16x16).png 81"
-81/texture = ExtResource( 3 )
+81/texture = ExtResource( 23 )
 81/tex_offset = Vector2( 0, 0 )
 81/modulate = Color( 1, 1, 1, 1 )
 81/region = Rect2( 240, 80, 16, 16 )
@@ -1758,7 +1757,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 81/shapes = [  ]
 81/z_index = 0
 82/name = "Terrain (16x16).png 82"
-82/texture = ExtResource( 3 )
+82/texture = ExtResource( 23 )
 82/tex_offset = Vector2( 0, 0 )
 82/modulate = Color( 1, 1, 1, 1 )
 82/region = Rect2( 240, 96, 16, 16 )
@@ -1772,7 +1771,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 82/shapes = [  ]
 82/z_index = 0
 83/name = "Terrain (16x16).png 83"
-83/texture = ExtResource( 3 )
+83/texture = ExtResource( 23 )
 83/tex_offset = Vector2( 0, 0 )
 83/modulate = Color( 1, 1, 1, 1 )
 83/region = Rect2( 272, 64, 16, 16 )
@@ -1786,7 +1785,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 83/shapes = [  ]
 83/z_index = 0
 84/name = "Terrain (16x16).png 84"
-84/texture = ExtResource( 3 )
+84/texture = ExtResource( 23 )
 84/tex_offset = Vector2( 0, 0 )
 84/modulate = Color( 1, 1, 1, 1 )
 84/region = Rect2( 288, 64, 16, 16 )
@@ -1800,7 +1799,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 84/shapes = [  ]
 84/z_index = 0
 85/name = "Terrain (16x16).png 85"
-85/texture = ExtResource( 3 )
+85/texture = ExtResource( 23 )
 85/tex_offset = Vector2( 0, 0 )
 85/modulate = Color( 1, 1, 1, 1 )
 85/region = Rect2( 304, 64, 16, 16 )
@@ -1814,7 +1813,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 85/shapes = [  ]
 85/z_index = 0
 86/name = "Terrain (16x16).png 86"
-86/texture = ExtResource( 3 )
+86/texture = ExtResource( 23 )
 86/tex_offset = Vector2( 0, 0 )
 86/modulate = Color( 1, 1, 1, 1 )
 86/region = Rect2( 272, 80, 16, 16 )
@@ -1828,7 +1827,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 86/shapes = [  ]
 86/z_index = 0
 87/name = "Terrain (16x16).png 87"
-87/texture = ExtResource( 3 )
+87/texture = ExtResource( 23 )
 87/tex_offset = Vector2( 0, 0 )
 87/modulate = Color( 1, 1, 1, 1 )
 87/region = Rect2( 288, 80, 16, 16 )
@@ -1842,7 +1841,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 87/shapes = [  ]
 87/z_index = 0
 88/name = "Terrain (16x16).png 88"
-88/texture = ExtResource( 3 )
+88/texture = ExtResource( 23 )
 88/tex_offset = Vector2( 0, 0 )
 88/modulate = Color( 1, 1, 1, 1 )
 88/region = Rect2( 304, 80, 16, 16 )
@@ -1856,7 +1855,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 88/shapes = [  ]
 88/z_index = 0
 89/name = "Terrain (16x16).png 89"
-89/texture = ExtResource( 3 )
+89/texture = ExtResource( 23 )
 89/tex_offset = Vector2( 0, 0 )
 89/modulate = Color( 1, 1, 1, 1 )
 89/region = Rect2( 272, 96, 16, 16 )
@@ -1870,7 +1869,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 89/shapes = [  ]
 89/z_index = 0
 90/name = "Terrain (16x16).png 90"
-90/texture = ExtResource( 3 )
+90/texture = ExtResource( 23 )
 90/tex_offset = Vector2( 0, 0 )
 90/modulate = Color( 1, 1, 1, 1 )
 90/region = Rect2( 288, 96, 16, 16 )
@@ -1884,7 +1883,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 90/shapes = [  ]
 90/z_index = 0
 91/name = "Terrain (16x16).png 91"
-91/texture = ExtResource( 3 )
+91/texture = ExtResource( 23 )
 91/tex_offset = Vector2( 0, 0 )
 91/modulate = Color( 1, 1, 1, 1 )
 91/region = Rect2( 304, 96, 16, 16 )
@@ -1898,7 +1897,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 91/shapes = [  ]
 91/z_index = 0
 92/name = "Terrain (16x16).png 92"
-92/texture = ExtResource( 3 )
+92/texture = ExtResource( 23 )
 92/tex_offset = Vector2( 0, 0 )
 92/modulate = Color( 1, 1, 1, 1 )
 92/region = Rect2( 320, 64, 16, 16 )
@@ -1912,7 +1911,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 92/shapes = [  ]
 92/z_index = 0
 93/name = "Terrain (16x16).png 93"
-93/texture = ExtResource( 3 )
+93/texture = ExtResource( 23 )
 93/tex_offset = Vector2( 0, 0 )
 93/modulate = Color( 1, 1, 1, 1 )
 93/region = Rect2( 336, 64, 16, 16 )
@@ -1926,7 +1925,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 93/shapes = [  ]
 93/z_index = 0
 94/name = "Terrain (16x16).png 94"
-94/texture = ExtResource( 3 )
+94/texture = ExtResource( 23 )
 94/tex_offset = Vector2( 0, 0 )
 94/modulate = Color( 1, 1, 1, 1 )
 94/region = Rect2( 320, 80, 16, 16 )
@@ -1940,7 +1939,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 94/shapes = [  ]
 94/z_index = 0
 95/name = "Terrain (16x16).png 95"
-95/texture = ExtResource( 3 )
+95/texture = ExtResource( 23 )
 95/tex_offset = Vector2( 0, 0 )
 95/modulate = Color( 1, 1, 1, 1 )
 95/region = Rect2( 336, 80, 16, 16 )
@@ -1954,7 +1953,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 95/shapes = [  ]
 95/z_index = 0
 96/name = "Terrain (16x16).png 96"
-96/texture = ExtResource( 3 )
+96/texture = ExtResource( 23 )
 96/tex_offset = Vector2( 0, 0 )
 96/modulate = Color( 1, 1, 1, 1 )
 96/region = Rect2( 0, 128, 16, 16 )
@@ -1968,7 +1967,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 96/shapes = [  ]
 96/z_index = 0
 97/name = "Terrain (16x16).png 97"
-97/texture = ExtResource( 3 )
+97/texture = ExtResource( 23 )
 97/tex_offset = Vector2( 0, 0 )
 97/modulate = Color( 1, 1, 1, 1 )
 97/region = Rect2( 16, 128, 16, 16 )
@@ -1982,7 +1981,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 97/shapes = [  ]
 97/z_index = 0
 98/name = "Terrain (16x16).png 98"
-98/texture = ExtResource( 3 )
+98/texture = ExtResource( 23 )
 98/tex_offset = Vector2( 0, 0 )
 98/modulate = Color( 1, 1, 1, 1 )
 98/region = Rect2( 32, 128, 16, 16 )
@@ -1996,7 +1995,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 98/shapes = [  ]
 98/z_index = 0
 99/name = "Terrain (16x16).png 99"
-99/texture = ExtResource( 3 )
+99/texture = ExtResource( 23 )
 99/tex_offset = Vector2( 0, 0 )
 99/modulate = Color( 1, 1, 1, 1 )
 99/region = Rect2( 0, 144, 16, 16 )
@@ -2010,7 +2009,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 99/shapes = [  ]
 99/z_index = 0
 100/name = "Terrain (16x16).png 100"
-100/texture = ExtResource( 3 )
+100/texture = ExtResource( 23 )
 100/tex_offset = Vector2( 0, 0 )
 100/modulate = Color( 1, 1, 1, 1 )
 100/region = Rect2( 16, 144, 16, 16 )
@@ -2024,7 +2023,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 100/shapes = [  ]
 100/z_index = 0
 101/name = "Terrain (16x16).png 101"
-101/texture = ExtResource( 3 )
+101/texture = ExtResource( 23 )
 101/tex_offset = Vector2( 0, 0 )
 101/modulate = Color( 1, 1, 1, 1 )
 101/region = Rect2( 32, 144, 16, 16 )
@@ -2038,7 +2037,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 101/shapes = [  ]
 101/z_index = 0
 102/name = "Terrain (16x16).png 102"
-102/texture = ExtResource( 3 )
+102/texture = ExtResource( 23 )
 102/tex_offset = Vector2( 0, 0 )
 102/modulate = Color( 1, 1, 1, 1 )
 102/region = Rect2( 0, 160, 16, 16 )
@@ -2052,7 +2051,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 102/shapes = [  ]
 102/z_index = 0
 103/name = "Terrain (16x16).png 103"
-103/texture = ExtResource( 3 )
+103/texture = ExtResource( 23 )
 103/tex_offset = Vector2( 0, 0 )
 103/modulate = Color( 1, 1, 1, 1 )
 103/region = Rect2( 16, 160, 16, 16 )
@@ -2066,7 +2065,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 103/shapes = [  ]
 103/z_index = 0
 104/name = "Terrain (16x16).png 104"
-104/texture = ExtResource( 3 )
+104/texture = ExtResource( 23 )
 104/tex_offset = Vector2( 0, 0 )
 104/modulate = Color( 1, 1, 1, 1 )
 104/region = Rect2( 32, 160, 16, 16 )
@@ -2080,7 +2079,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 104/shapes = [  ]
 104/z_index = 0
 105/name = "Terrain (16x16).png 105"
-105/texture = ExtResource( 3 )
+105/texture = ExtResource( 23 )
 105/tex_offset = Vector2( 0, 0 )
 105/modulate = Color( 1, 1, 1, 1 )
 105/region = Rect2( 48, 128, 16, 16 )
@@ -2094,7 +2093,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 105/shapes = [  ]
 105/z_index = 0
 106/name = "Terrain (16x16).png 106"
-106/texture = ExtResource( 3 )
+106/texture = ExtResource( 23 )
 106/tex_offset = Vector2( 0, 0 )
 106/modulate = Color( 1, 1, 1, 1 )
 106/region = Rect2( 64, 128, 16, 16 )
@@ -2108,7 +2107,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 106/shapes = [  ]
 106/z_index = 0
 107/name = "Terrain (16x16).png 107"
-107/texture = ExtResource( 3 )
+107/texture = ExtResource( 23 )
 107/tex_offset = Vector2( 0, 0 )
 107/modulate = Color( 1, 1, 1, 1 )
 107/region = Rect2( 48, 144, 16, 16 )
@@ -2122,7 +2121,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 107/shapes = [  ]
 107/z_index = 0
 108/name = "Terrain (16x16).png 108"
-108/texture = ExtResource( 3 )
+108/texture = ExtResource( 23 )
 108/tex_offset = Vector2( 0, 0 )
 108/modulate = Color( 1, 1, 1, 1 )
 108/region = Rect2( 64, 144, 16, 16 )
@@ -2136,7 +2135,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 108/shapes = [  ]
 108/z_index = 0
 109/name = "Terrain (16x16).png 109"
-109/texture = ExtResource( 3 )
+109/texture = ExtResource( 23 )
 109/tex_offset = Vector2( 0, 0 )
 109/modulate = Color( 1, 1, 1, 1 )
 109/region = Rect2( 96, 128, 16, 16 )
@@ -2157,7 +2156,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 109/z_index = 0
 110/name = "Terrain (16x16).png 110"
-110/texture = ExtResource( 3 )
+110/texture = ExtResource( 23 )
 110/tex_offset = Vector2( 0, 0 )
 110/modulate = Color( 1, 1, 1, 1 )
 110/region = Rect2( 112, 128, 16, 16 )
@@ -2178,7 +2177,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 110/z_index = 0
 111/name = "Terrain (16x16).png 111"
-111/texture = ExtResource( 3 )
+111/texture = ExtResource( 23 )
 111/tex_offset = Vector2( 0, 0 )
 111/modulate = Color( 1, 1, 1, 1 )
 111/region = Rect2( 128, 128, 16, 16 )
@@ -2199,7 +2198,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 111/z_index = 0
 112/name = "Terrain (16x16).png 112"
-112/texture = ExtResource( 3 )
+112/texture = ExtResource( 23 )
 112/tex_offset = Vector2( 0, 0 )
 112/modulate = Color( 1, 1, 1, 1 )
 112/region = Rect2( 96, 144, 16, 16 )
@@ -2220,7 +2219,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 112/z_index = 0
 113/name = "Terrain (16x16).png 113"
-113/texture = ExtResource( 3 )
+113/texture = ExtResource( 23 )
 113/tex_offset = Vector2( 0, 0 )
 113/modulate = Color( 1, 1, 1, 1 )
 113/region = Rect2( 112, 144, 16, 16 )
@@ -2253,7 +2252,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 113/z_index = 0
 114/name = "Terrain (16x16).png 114"
-114/texture = ExtResource( 3 )
+114/texture = ExtResource( 23 )
 114/tex_offset = Vector2( 0, 0 )
 114/modulate = Color( 1, 1, 1, 1 )
 114/region = Rect2( 128, 144, 16, 16 )
@@ -2274,7 +2273,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 114/z_index = 0
 115/name = "Terrain (16x16).png 115"
-115/texture = ExtResource( 3 )
+115/texture = ExtResource( 23 )
 115/tex_offset = Vector2( 0, 0 )
 115/modulate = Color( 1, 1, 1, 1 )
 115/region = Rect2( 96, 160, 16, 16 )
@@ -2295,7 +2294,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 115/z_index = 0
 116/name = "Terrain (16x16).png 116"
-116/texture = ExtResource( 3 )
+116/texture = ExtResource( 23 )
 116/tex_offset = Vector2( 0, 0 )
 116/modulate = Color( 1, 1, 1, 1 )
 116/region = Rect2( 112, 160, 16, 16 )
@@ -2316,7 +2315,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 116/z_index = 0
 117/name = "Terrain (16x16).png 117"
-117/texture = ExtResource( 3 )
+117/texture = ExtResource( 23 )
 117/tex_offset = Vector2( 0, 0 )
 117/modulate = Color( 1, 1, 1, 1 )
 117/region = Rect2( 128, 160, 16, 16 )
@@ -2337,7 +2336,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 117/z_index = 0
 118/name = "Terrain (16x16).png 118"
-118/texture = ExtResource( 3 )
+118/texture = ExtResource( 23 )
 118/tex_offset = Vector2( 0, 0 )
 118/modulate = Color( 1, 1, 1, 1 )
 118/region = Rect2( 144, 128, 16, 16 )
@@ -2358,7 +2357,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 118/z_index = 0
 119/name = "Terrain (16x16).png 119"
-119/texture = ExtResource( 3 )
+119/texture = ExtResource( 23 )
 119/tex_offset = Vector2( 0, 0 )
 119/modulate = Color( 1, 1, 1, 1 )
 119/region = Rect2( 160, 128, 16, 16 )
@@ -2379,7 +2378,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 119/z_index = 0
 120/name = "Terrain (16x16).png 120"
-120/texture = ExtResource( 3 )
+120/texture = ExtResource( 23 )
 120/tex_offset = Vector2( 0, 0 )
 120/modulate = Color( 1, 1, 1, 1 )
 120/region = Rect2( 144, 144, 16, 16 )
@@ -2406,7 +2405,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 120/z_index = 0
 121/name = "Terrain (16x16).png 121"
-121/texture = ExtResource( 3 )
+121/texture = ExtResource( 23 )
 121/tex_offset = Vector2( 0, 0 )
 121/modulate = Color( 1, 1, 1, 1 )
 121/region = Rect2( 160, 144, 16, 16 )
@@ -2427,7 +2426,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 121/z_index = 0
 122/name = "Terrain (16x16).png 122"
-122/texture = ExtResource( 3 )
+122/texture = ExtResource( 23 )
 122/tex_offset = Vector2( 0, 0 )
 122/modulate = Color( 1, 1, 1, 1 )
 122/region = Rect2( 192, 128, 16, 16 )
@@ -2441,7 +2440,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 122/shapes = [  ]
 122/z_index = 0
 123/name = "Terrain (16x16).png 123"
-123/texture = ExtResource( 3 )
+123/texture = ExtResource( 23 )
 123/tex_offset = Vector2( 0, 0 )
 123/modulate = Color( 1, 1, 1, 1 )
 123/region = Rect2( 208, 128, 16, 16 )
@@ -2455,7 +2454,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 123/shapes = [  ]
 123/z_index = 0
 124/name = "Terrain (16x16).png 124"
-124/texture = ExtResource( 3 )
+124/texture = ExtResource( 23 )
 124/tex_offset = Vector2( 0, 0 )
 124/modulate = Color( 1, 1, 1, 1 )
 124/region = Rect2( 224, 128, 16, 16 )
@@ -2469,7 +2468,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 124/shapes = [  ]
 124/z_index = 0
 125/name = "Terrain (16x16).png 125"
-125/texture = ExtResource( 3 )
+125/texture = ExtResource( 23 )
 125/tex_offset = Vector2( 0, 0 )
 125/modulate = Color( 1, 1, 1, 1 )
 125/region = Rect2( 192, 144, 16, 16 )
@@ -2483,7 +2482,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 125/shapes = [  ]
 125/z_index = 0
 126/name = "Terrain (16x16).png 126"
-126/texture = ExtResource( 3 )
+126/texture = ExtResource( 23 )
 126/tex_offset = Vector2( 0, 0 )
 126/modulate = Color( 1, 1, 1, 1 )
 126/region = Rect2( 208, 144, 16, 16 )
@@ -2497,7 +2496,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 126/shapes = [  ]
 126/z_index = 0
 127/name = "Terrain (16x16).png 127"
-127/texture = ExtResource( 3 )
+127/texture = ExtResource( 23 )
 127/tex_offset = Vector2( 0, 0 )
 127/modulate = Color( 1, 1, 1, 1 )
 127/region = Rect2( 224, 144, 16, 16 )
@@ -2511,7 +2510,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 127/shapes = [  ]
 127/z_index = 0
 128/name = "Terrain (16x16).png 128"
-128/texture = ExtResource( 3 )
+128/texture = ExtResource( 23 )
 128/tex_offset = Vector2( 0, 0 )
 128/modulate = Color( 1, 1, 1, 1 )
 128/region = Rect2( 208, 160, 16, 16 )
@@ -2525,7 +2524,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 128/shapes = [  ]
 128/z_index = 0
 129/name = "Terrain (16x16).png 129"
-129/texture = ExtResource( 3 )
+129/texture = ExtResource( 23 )
 129/tex_offset = Vector2( 0, 0 )
 129/modulate = Color( 1, 1, 1, 1 )
 129/region = Rect2( 224, 160, 16, 16 )
@@ -2539,7 +2538,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 129/shapes = [  ]
 129/z_index = 0
 130/name = "Terrain (16x16).png 130"
-130/texture = ExtResource( 3 )
+130/texture = ExtResource( 23 )
 130/tex_offset = Vector2( 0, 0 )
 130/modulate = Color( 1, 1, 1, 1 )
 130/region = Rect2( 240, 128, 16, 16 )
@@ -2553,7 +2552,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 130/shapes = [  ]
 130/z_index = 0
 131/name = "Terrain (16x16).png 131"
-131/texture = ExtResource( 3 )
+131/texture = ExtResource( 23 )
 131/tex_offset = Vector2( 0, 0 )
 131/modulate = Color( 1, 1, 1, 1 )
 131/region = Rect2( 240, 144, 16, 16 )
@@ -2567,7 +2566,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 131/shapes = [  ]
 131/z_index = 0
 132/name = "Terrain (16x16).png 132"
-132/texture = ExtResource( 3 )
+132/texture = ExtResource( 23 )
 132/tex_offset = Vector2( 0, 0 )
 132/modulate = Color( 1, 1, 1, 1 )
 132/region = Rect2( 240, 160, 16, 16 )
@@ -2581,7 +2580,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 132/shapes = [  ]
 132/z_index = 0
 133/name = "Terrain (16x16).png 133"
-133/texture = ExtResource( 3 )
+133/texture = ExtResource( 23 )
 133/tex_offset = Vector2( 0, 0 )
 133/modulate = Color( 1, 1, 1, 1 )
 133/region = Rect2( 272, 128, 16, 16 )
@@ -2595,7 +2594,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 133/shapes = [  ]
 133/z_index = 0
 134/name = "Terrain (16x16).png 134"
-134/texture = ExtResource( 3 )
+134/texture = ExtResource( 23 )
 134/tex_offset = Vector2( 0, 0 )
 134/modulate = Color( 1, 1, 1, 1 )
 134/region = Rect2( 288, 128, 16, 16 )
@@ -2609,7 +2608,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 134/shapes = [  ]
 134/z_index = 0
 135/name = "Terrain (16x16).png 135"
-135/texture = ExtResource( 3 )
+135/texture = ExtResource( 23 )
 135/tex_offset = Vector2( 0, 0 )
 135/modulate = Color( 1, 1, 1, 1 )
 135/region = Rect2( 304, 128, 16, 16 )
@@ -2623,7 +2622,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 135/shapes = [  ]
 135/z_index = 0
 136/name = "Terrain (16x16).png 136"
-136/texture = ExtResource( 3 )
+136/texture = ExtResource( 23 )
 136/tex_offset = Vector2( 0, 0 )
 136/modulate = Color( 1, 1, 1, 1 )
 136/region = Rect2( 272, 144, 16, 16 )
@@ -2637,7 +2636,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 136/shapes = [  ]
 136/z_index = 0
 137/name = "Terrain (16x16).png 137"
-137/texture = ExtResource( 3 )
+137/texture = ExtResource( 23 )
 137/tex_offset = Vector2( 0, 0 )
 137/modulate = Color( 1, 1, 1, 1 )
 137/region = Rect2( 288, 144, 16, 16 )
@@ -2651,7 +2650,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 137/shapes = [  ]
 137/z_index = 0
 138/name = "Terrain (16x16).png 138"
-138/texture = ExtResource( 3 )
+138/texture = ExtResource( 23 )
 138/tex_offset = Vector2( 0, 0 )
 138/modulate = Color( 1, 1, 1, 1 )
 138/region = Rect2( 304, 144, 16, 16 )
@@ -2665,7 +2664,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 138/shapes = [  ]
 138/z_index = 0
 139/name = "Terrain (16x16).png 139"
-139/texture = ExtResource( 3 )
+139/texture = ExtResource( 23 )
 139/tex_offset = Vector2( 0, 0 )
 139/modulate = Color( 1, 1, 1, 1 )
 139/region = Rect2( 288, 160, 16, 16 )
@@ -2679,7 +2678,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 139/shapes = [  ]
 139/z_index = 0
 140/name = "Terrain (16x16).png 140"
-140/texture = ExtResource( 3 )
+140/texture = ExtResource( 23 )
 140/tex_offset = Vector2( 0, 0 )
 140/modulate = Color( 1, 1, 1, 1 )
 140/region = Rect2( 304, 160, 16, 16 )
@@ -2693,7 +2692,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 140/shapes = [  ]
 140/z_index = 0
 141/name = "Terrain (16x16).png 141"
-141/texture = ExtResource( 3 )
+141/texture = ExtResource( 23 )
 141/tex_offset = Vector2( 0, 0 )
 141/modulate = Color( 1, 1, 1, 1 )
 141/region = Rect2( 320, 128, 16, 16 )
@@ -2707,7 +2706,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 141/shapes = [  ]
 141/z_index = 0
 142/name = "Terrain (16x16).png 142"
-142/texture = ExtResource( 3 )
+142/texture = ExtResource( 23 )
 142/tex_offset = Vector2( 0, 0 )
 142/modulate = Color( 1, 1, 1, 1 )
 142/region = Rect2( 320, 144, 16, 16 )
@@ -2721,7 +2720,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 142/shapes = [  ]
 142/z_index = 0
 143/name = "Terrain (16x16).png 143"
-143/texture = ExtResource( 3 )
+143/texture = ExtResource( 23 )
 143/tex_offset = Vector2( 0, 0 )
 143/modulate = Color( 1, 1, 1, 1 )
 143/region = Rect2( 320, 160, 16, 16 )
@@ -2735,7 +2734,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 143/shapes = [  ]
 143/z_index = 0
 144/name = "Terrain (16x16).png 144"
-144/texture = ExtResource( 3 )
+144/texture = ExtResource( 23 )
 144/tex_offset = Vector2( 0, 0 )
 144/modulate = Color( 1, 1, 1, 1 )
 144/region = Rect2( 16, 16, 16, 16 )
@@ -2768,8 +2767,8 @@ shader_param/Speed = 0.02
 [sub_resource type="RectangleShape2D" id=83]
 extents = Vector2( 32, 8 )
 
-[node name="Level_01" type="Node2D"]
-script = ExtResource( 20 )
+[node name="Level_02" type="Node2D"]
+script = ExtResource( 17 )
 
 [node name="TileMap" type="TileMap" parent="."]
 z_index = -1
@@ -2779,22 +2778,30 @@ show_collision = true
 collision_layer = 8
 collision_mask = 6
 format = 1
-tile_data = PoolIntArray( -851969, 5, 0, -917424, 3, 0, -786433, 5, 0, -851888, 3, 0, -720897, 5, 0, -786352, 3, 0, -655361, 5, 0, -720816, 3, 0, -589825, 5, 0, -655280, 3, 0, -524289, 5, 0, -589744, 3, 0, -458753, 5, 0, -524208, 3, 0, -393217, 5, 0, -458672, 3, 0, -327681, 5, 0, -393136, 3, 0, -262145, 5, 0, -327600, 3, 0, -196609, 5, 0, -262064, 3, 0, -131073, 5, 0, -196528, 3, 0, -65537, 5, 0, -130992, 3, 0, -1, 5, 0, -65456, 3, 0, 65535, 5, 0, 80, 3, 0, 131071, 5, 0, 65616, 3, 0, 196607, 5, 0, 131152, 3, 0, 262143, 5, 0, 196688, 3, 0, 327679, 5, 0, 262158, 40, 0, 262159, 42, 0, 262197, 59, 0, 262198, 60, 0, 262199, 60, 0, 262200, 60, 0, 262201, 60, 0, 262202, 60, 0, 262203, 61, 0, 262222, 109, 0, 262223, 111, 0, 262224, 3, 0, 393215, 5, 0, 327699, 40, 0, 327700, 41, 0, 327701, 42, 0, 327733, 62, 0, 327734, 63, 0, 327735, 63, 0, 327736, 63, 0, 327737, 63, 0, 327738, 63, 0, 327739, 64, 0, 327757, 109, 0, 327758, 121, 0, 327759, 113, 0, 327760, 3, 0, 458751, 5, 0, 393220, 40, 0, 393221, 41, 0, 393222, 42, 0, 393269, 65, 0, 393270, 69, 0, 393271, 63, 0, 393272, 63, 0, 393273, 63, 0, 393274, 63, 0, 393275, 64, 0, 393292, 109, 0, 393293, 121, 0, 393294, 113, 0, 393295, 113, 0, 393296, 3, 0, 524287, 5, 0, 458788, 29, 0, 458804, 59, 0, 458805, 60, 0, 458806, 71, 0, 458807, 63, 0, 458808, 63, 0, 458809, 63, 0, 458810, 63, 0, 458811, 70, 0, 458812, 61, 0, 458827, 109, 0, 458828, 110, 0, 458829, 121, 0, 458830, 113, 0, 458831, 113, 0, 458832, 3, 0, 589823, 5, 0, 524324, 29, 0, 524340, 62, 0, 524341, 63, 0, 524342, 63, 0, 524343, 63, 0, 524344, 63, 0, 524345, 63, 0, 524346, 63, 0, 524347, 63, 0, 524348, 64, 0, 524361, 109, 0, 524362, 110, 0, 524363, 121, 0, 524364, 113, 0, 524365, 113, 0, 524366, 113, 0, 524367, 113, 0, 524368, 3, 0, 655359, 5, 0, 589824, 13, 0, 589825, 14, 0, 589826, 14, 0, 589827, 14, 0, 589828, 14, 0, 589829, 15, 0, 589840, 59, 0, 589841, 60, 0, 589842, 60, 0, 589843, 60, 0, 589844, 60, 0, 589845, 60, 0, 589846, 60, 0, 589847, 60, 0, 589848, 60, 0, 589849, 60, 0, 589850, 60, 0, 589851, 60, 0, 589852, 60, 0, 589853, 60, 0, 589854, 60, 0, 589855, 61, 0, 589860, 59, 0, 589861, 60, 0, 589862, 60, 0, 589863, 60, 0, 589864, 60, 0, 589865, 60, 0, 589866, 61, 0, 589867, 59, 0, 589868, 60, 0, 589869, 60, 0, 589870, 60, 0, 589871, 60, 0, 589872, 60, 0, 589873, 60, 0, 589874, 60, 0, 589875, 60, 0, 589876, 62, 0, 589877, 63, 0, 589878, 63, 0, 589879, 63, 0, 589880, 63, 0, 589881, 63, 0, 589882, 63, 0, 589883, 63, 0, 589884, 64, 0, 589895, 109, 0, 589896, 110, 0, 589897, 110, 0, 589898, 121, 0, 589899, 113, 0, 589900, 113, 0, 589901, 113, 0, 589902, 113, 0, 589903, 113, 0, 589904, 3, 0, 720895, 5, 0, 655360, 16, 0, 655361, 17, 0, 655362, 17, 0, 655363, 24, 0, 655364, 25, 0, 655365, 24, 0, 655366, 14, 0, 655367, 14, 0, 655368, 14, 0, 655369, 14, 0, 655370, 14, 0, 655371, 14, 0, 655372, 14, 0, 655373, 14, 0, 655374, 14, 0, 655375, 14, 0, 655376, 25, 0, 655377, 63, 0, 655378, 63, 0, 655379, 63, 0, 655380, 63, 0, 655381, 63, 0, 655382, 63, 0, 655383, 63, 0, 655384, 63, 0, 655385, 63, 0, 655386, 63, 0, 655387, 63, 0, 655388, 63, 0, 655389, 63, 0, 655390, 63, 0, 655391, 64, 0, 655396, 62, 0, 655397, 63, 0, 655398, 63, 0, 655399, 63, 0, 655400, 63, 0, 655401, 63, 0, 655402, 70, 0, 655403, 71, 0, 655404, 63, 0, 655405, 63, 0, 655406, 63, 0, 655407, 63, 0, 655408, 63, 0, 655409, 63, 0, 655410, 63, 0, 655411, 70, 0, 655412, 71, 0, 655413, 63, 0, 655414, 63, 0, 655415, 63, 0, 655416, 63, 0, 655417, 63, 0, 655418, 63, 0, 655419, 63, 0, 655420, 70, 0, 655421, 109, 0, 655422, 110, 0, 655423, 110, 0, 655424, 110, 0, 655425, 110, 0, 655426, 110, 0, 655427, 110, 0, 655428, 110, 0, 655429, 110, 0, 655430, 110, 0, 655431, 110, 0, 655432, 110, 0, 655433, 110, 0, 655434, 110, 0, 655435, 110, 0, 655436, 110, 0, 655437, 110, 0, 655438, 110, 0, 655439, 111, 0, 655440, 3, 0, 786431, 5, 0, 720896, 19, 0, 720897, 20, 0, 720898, 20, 0, 720899, 20, 0, 720900, 20, 0, 720901, 20, 0, 720902, 20, 0, 720903, 20, 0, 720904, 20, 0, 720905, 20, 0, 720906, 20, 0, 720907, 20, 0, 720908, 20, 0, 720909, 20, 0, 720910, 20, 0, 720911, 20, 0, 720912, 20, 0, 720913, 20, 0, 720914, 63, 0, 720915, 63, 0, 720916, 63, 0, 720917, 63, 0, 720918, 63, 0, 720919, 63, 0, 720920, 63, 0, 720921, 63, 0, 720922, 63, 0, 720923, 63, 0, 720924, 63, 0, 720925, 63, 0, 720926, 63, 0, 720927, 64, 0, 720932, 62, 0, 720933, 63, 0, 720934, 63, 0, 720935, 63, 0, 720936, 63, 0, 720937, 63, 0, 720938, 63, 0, 720939, 63, 0, 720940, 63, 0, 720941, 63, 0, 720942, 63, 0, 720943, 63, 0, 720944, 63, 0, 720945, 63, 0, 720946, 63, 0, 720947, 63, 0, 720948, 63, 0, 720949, 63, 0, 720950, 63, 0, 720951, 63, 0, 720952, 63, 0, 720953, 63, 0, 720954, 63, 0, 720955, 63, 0, 720956, 64, 0, 720957, 112, 0, 720958, 113, 0, 720959, 113, 0, 720960, 113, 0, 720961, 113, 0, 720962, 113, 0, 720963, 113, 0, 720964, 113, 0, 720965, 113, 0, 720966, 113, 0, 720967, 113, 0, 720968, 113, 0, 720969, 113, 0, 720970, 113, 0, 720971, 113, 0, 720972, 113, 0, 720973, 113, 0, 720974, 113, 0, 720975, 113, 0, 720976, 3, 0, 851967, 11, 0, 786432, 1, 0, 786433, 1, 0, 786434, 1, 0, 786435, 1, 0, 786436, 1, 0, 786437, 1, 0, 786438, 1, 0, 786439, 1, 0, 786440, 1, 0, 786441, 1, 0, 786442, 1, 0, 786443, 1, 0, 786444, 1, 0, 786445, 1, 0, 786446, 1, 0, 786447, 1, 0, 786448, 1, 0, 786449, 1, 0, 786450, 1, 0, 786451, 1, 0, 786452, 1, 0, 786453, 1, 0, 786454, 1, 0, 786455, 1, 0, 786456, 1, 0, 786457, 1, 0, 786458, 1, 0, 786459, 1, 0, 786460, 1, 0, 786461, 1, 0, 786462, 1, 0, 786463, 1, 0, 786464, 50, 0, 786465, 50, 0, 786466, 50, 0, 786467, 50, 0, 786468, 1, 0, 786469, 1, 0, 786470, 1, 0, 786471, 1, 0, 786472, 1, 0, 786473, 1, 0, 786474, 1, 0, 786475, 1, 0, 786476, 1, 0, 786477, 1, 0, 786478, 1, 0, 786479, 1, 0, 786480, 1, 0, 786481, 1, 0, 786482, 1, 0, 786483, 1, 0, 786484, 1, 0, 786485, 1, 0, 786486, 1, 0, 786487, 1, 0, 786488, 1, 0, 786489, 1, 0, 786490, 1, 0, 786491, 1, 0, 786492, 1, 0, 786493, 1, 0, 786494, 1, 0, 786495, 1, 0, 786496, 1, 0, 786497, 1, 0, 786498, 1, 0, 786499, 1, 0, 786500, 1, 0, 786501, 1, 0, 786502, 1, 0, 786503, 1, 0, 786504, 1, 0, 786505, 1, 0, 786506, 1, 0, 786507, 1, 0, 786508, 1, 0, 786509, 1, 0, 786510, 1, 0, 786511, 1, 0, 786512, 12, 0, 917503, 4, 0, 851968, 4, 0, 851969, 4, 0, 851970, 4, 0, 851971, 4, 0, 851972, 4, 0, 851973, 4, 0, 851974, 4, 0, 851975, 4, 0, 851976, 4, 0, 851977, 4, 0, 851978, 4, 0, 851979, 4, 0, 851980, 4, 0, 851981, 4, 0, 851982, 4, 0, 851983, 4, 0, 851984, 4, 0, 851985, 4, 0, 851986, 4, 0, 851987, 4, 0, 851988, 4, 0, 851989, 4, 0, 851990, 4, 0, 851991, 4, 0, 851992, 4, 0, 851993, 4, 0, 851994, 4, 0, 851995, 4, 0, 851996, 4, 0, 851997, 4, 0, 851998, 4, 0, 851999, 4, 0, 852000, 4, 0, 852001, 4, 0, 852002, 4, 0, 852003, 4, 0, 852004, 4, 0, 852005, 4, 0, 852006, 4, 0, 852007, 4, 0, 852008, 4, 0, 852009, 4, 0, 852010, 4, 0, 852011, 4, 0, 852012, 4, 0, 852013, 4, 0, 852014, 4, 0, 852015, 4, 0, 852016, 4, 0, 852017, 4, 0, 852018, 4, 0, 852019, 4, 0, 852020, 4, 0, 852021, 4, 0, 852022, 4, 0, 852023, 4, 0, 852024, 4, 0, 852025, 4, 0, 852026, 4, 0, 852027, 4, 0, 852028, 4, 0, 852029, 4, 0, 852030, 4, 0, 852031, 4, 0, 852032, 4, 0, 852033, 4, 0, 852034, 4, 0, 852035, 4, 0, 852036, 4, 0, 852037, 4, 0, 852038, 4, 0, 852039, 4, 0, 852040, 4, 0, 852041, 4, 0, 852042, 4, 0, 852043, 4, 0, 852044, 4, 0, 852045, 4, 0, 852046, 4, 0, 852047, 4, 0, 852048, 4, 0, 983039, 4, 0, 917504, 4, 0, 917505, 4, 0, 917506, 4, 0, 917507, 4, 0, 917508, 4, 0, 917509, 4, 0, 917510, 4, 0, 917511, 4, 0, 917512, 4, 0, 917513, 4, 0, 917514, 4, 0, 917515, 4, 0, 917516, 4, 0, 917517, 4, 0, 917518, 4, 0, 917519, 4, 0, 917520, 4, 0, 917521, 4, 0, 917522, 4, 0, 917523, 4, 0, 917524, 4, 0, 917525, 4, 0, 917526, 4, 0, 917527, 4, 0, 917528, 4, 0, 917529, 4, 0, 917530, 4, 0, 917531, 4, 0, 917532, 4, 0, 917533, 4, 0, 917534, 4, 0, 917535, 4, 0, 917536, 4, 0, 917537, 4, 0, 917538, 4, 0, 917539, 4, 0, 917540, 4, 0, 917541, 4, 0, 917542, 4, 0, 917543, 4, 0, 917544, 4, 0, 917545, 4, 0, 917546, 4, 0, 917547, 4, 0, 917548, 4, 0, 917549, 4, 0, 917550, 4, 0, 917551, 4, 0, 917552, 4, 0, 917553, 4, 0, 917554, 4, 0, 917555, 4, 0, 917556, 4, 0, 917557, 4, 0, 917558, 4, 0, 917559, 4, 0, 917560, 4, 0, 917561, 4, 0, 917562, 4, 0, 917563, 4, 0, 917564, 4, 0, 917565, 4, 0, 917566, 4, 0, 917567, 4, 0, 917568, 4, 0, 917569, 4, 0, 917570, 4, 0, 917571, 4, 0, 917572, 4, 0, 917573, 4, 0, 917574, 4, 0, 917575, 4, 0, 917576, 4, 0, 917577, 4, 0, 917578, 4, 0, 917579, 4, 0, 917580, 4, 0, 917581, 4, 0, 917582, 4, 0, 917583, 4, 0, 917584, 4, 0, 1048575, 4, 0, 983040, 4, 0, 983041, 4, 0, 983042, 4, 0, 983043, 4, 0, 983044, 4, 0, 983045, 4, 0, 983046, 4, 0, 983047, 4, 0, 983048, 4, 0, 983049, 4, 0, 983050, 4, 0, 983051, 4, 0, 983052, 4, 0, 983053, 4, 0, 983054, 4, 0, 983055, 4, 0, 983056, 4, 0, 983057, 4, 0, 983058, 4, 0, 983059, 4, 0, 983060, 4, 0, 983061, 4, 0, 983062, 4, 0, 983063, 4, 0, 983064, 4, 0, 983065, 4, 0, 983066, 4, 0, 983067, 4, 0, 983068, 4, 0, 983069, 4, 0, 983070, 4, 0, 983071, 4, 0, 983072, 4, 0, 983073, 4, 0, 983074, 4, 0, 983075, 4, 0, 983076, 4, 0, 983077, 4, 0, 983078, 4, 0, 983079, 4, 0, 983080, 4, 0, 983081, 4, 0, 983082, 4, 0, 983083, 4, 0, 983084, 4, 0, 983085, 4, 0, 983086, 4, 0, 983087, 4, 0, 983088, 4, 0, 983089, 4, 0, 983090, 4, 0, 983091, 4, 0, 983092, 4, 0, 983093, 4, 0, 983094, 4, 0, 983095, 4, 0, 983096, 4, 0, 983097, 4, 0, 983098, 4, 0, 983099, 4, 0, 983100, 4, 0, 983101, 4, 0, 983102, 4, 0, 983103, 4, 0, 983104, 4, 0, 983105, 4, 0, 983106, 4, 0, 983107, 4, 0, 983108, 4, 0, 983109, 4, 0, 983110, 4, 0, 983111, 4, 0, 983112, 4, 0, 983113, 4, 0, 983114, 4, 0, 983115, 4, 0, 983116, 4, 0, 983117, 4, 0, 983118, 4, 0, 983119, 4, 0, 983120, 4, 0, 1114111, 4, 0, 1048576, 4, 0, 1048577, 4, 0, 1048578, 4, 0, 1048579, 4, 0, 1048580, 4, 0, 1048581, 4, 0, 1048582, 4, 0, 1048583, 4, 0, 1048584, 4, 0, 1048585, 4, 0, 1048586, 4, 0, 1048587, 4, 0, 1048588, 4, 0, 1048589, 4, 0, 1048590, 4, 0, 1048591, 4, 0, 1048592, 4, 0, 1048593, 4, 0, 1048594, 4, 0, 1048595, 4, 0, 1048596, 4, 0, 1048597, 4, 0, 1048598, 4, 0, 1048599, 4, 0, 1048600, 4, 0, 1048601, 4, 0, 1048602, 4, 0, 1048603, 4, 0, 1048604, 4, 0, 1048605, 4, 0, 1048606, 4, 0, 1048607, 4, 0, 1048608, 4, 0, 1048609, 4, 0, 1048610, 4, 0, 1048611, 4, 0, 1048612, 4, 0, 1048613, 4, 0, 1048614, 4, 0, 1048615, 4, 0, 1048616, 4, 0, 1048617, 4, 0, 1048618, 4, 0, 1048619, 4, 0, 1048620, 4, 0, 1048621, 4, 0, 1048622, 4, 0, 1048623, 4, 0, 1048624, 4, 0, 1048625, 4, 0, 1048626, 4, 0, 1048627, 4, 0, 1048628, 4, 0, 1048629, 4, 0, 1048630, 4, 0, 1048631, 4, 0, 1048632, 4, 0, 1048633, 4, 0, 1048634, 4, 0, 1048635, 4, 0, 1048636, 4, 0, 1048637, 4, 0, 1048638, 4, 0, 1048639, 4, 0, 1048640, 4, 0, 1048641, 4, 0, 1048642, 4, 0, 1048643, 4, 0, 1048644, 4, 0, 1048645, 4, 0, 1048646, 4, 0, 1048647, 4, 0, 1048648, 4, 0, 1048649, 4, 0, 1048650, 4, 0, 1048651, 4, 0, 1048652, 4, 0, 1048653, 4, 0, 1048654, 4, 0, 1048655, 4, 0, 1048656, 4, 0 )
+tile_data = PoolIntArray( -851969, 5, 0, -917424, 3, 0, -786433, 5, 0, -851888, 3, 0, -720897, 5, 0, -786352, 3, 0, -655361, 5, 0, -720816, 3, 0, -589825, 5, 0, -655280, 3, 0, -524289, 5, 0, -589744, 3, 0, -458753, 5, 0, -524208, 3, 0, -393217, 5, 0, -458672, 3, 0, -327681, 5, 0, -393136, 3, 0, -262145, 5, 0, -327600, 3, 0, -196609, 5, 0, -262064, 3, 0, -131073, 5, 0, -196528, 3, 0, -65537, 5, 0, -130992, 3, 0, -1, 5, 0, -65456, 3, 0, 65535, 5, 0, 80, 3, 0, 131071, 5, 0, 65616, 3, 0, 196607, 5, 0, 131152, 3, 0, 262143, 5, 0, 196688, 3, 0, 327679, 5, 0, 262158, 40, 0, 262159, 42, 0, 262197, 59, 0, 262198, 60, 0, 262199, 60, 0, 262200, 60, 0, 262201, 60, 0, 262202, 60, 0, 262203, 61, 0, 262222, 109, 0, 262223, 111, 0, 262224, 3, 0, 393215, 5, 0, 327733, 62, 0, 327734, 63, 0, 327735, 63, 0, 327736, 63, 0, 327737, 63, 0, 327738, 63, 0, 327739, 64, 0, 327757, 109, 0, 327758, 121, 0, 327759, 113, 0, 327760, 3, 0, 458751, 5, 0, 393220, 40, 0, 393221, 41, 0, 393222, 42, 0, 393269, 65, 0, 393270, 69, 0, 393271, 63, 0, 393272, 63, 0, 393273, 63, 0, 393274, 63, 0, 393275, 64, 0, 393292, 109, 0, 393293, 121, 0, 393294, 113, 0, 393295, 113, 0, 393296, 3, 0, 524287, 5, 0, 458788, 29, 0, 458804, 59, 0, 458805, 60, 0, 458806, 71, 0, 458807, 63, 0, 458808, 63, 0, 458809, 63, 0, 458810, 63, 0, 458811, 70, 0, 458812, 61, 0, 458827, 109, 0, 458828, 110, 0, 458829, 121, 0, 458830, 113, 0, 458831, 113, 0, 458832, 3, 0, 589823, 5, 0, 524324, 29, 0, 524340, 62, 0, 524341, 63, 0, 524342, 63, 0, 524343, 63, 0, 524344, 63, 0, 524345, 63, 0, 524346, 63, 0, 524347, 63, 0, 524348, 64, 0, 524361, 109, 0, 524362, 110, 0, 524363, 121, 0, 524364, 113, 0, 524365, 113, 0, 524366, 113, 0, 524367, 113, 0, 524368, 3, 0, 655359, 5, 0, 589824, 13, 0, 589825, 14, 0, 589826, 14, 0, 589827, 14, 0, 589828, 14, 0, 589829, 15, 0, 589840, 59, 0, 589841, 60, 0, 589842, 60, 0, 589843, 60, 0, 589844, 60, 0, 589848, 60, 0, 589849, 60, 0, 589850, 60, 0, 589851, 60, 0, 589852, 60, 0, 589853, 60, 0, 589854, 60, 0, 589855, 61, 0, 589860, 59, 0, 589861, 60, 0, 589862, 60, 0, 589863, 60, 0, 589864, 60, 0, 589865, 60, 0, 589866, 61, 0, 589867, 59, 0, 589868, 60, 0, 589869, 60, 0, 589870, 60, 0, 589871, 60, 0, 589872, 60, 0, 589873, 60, 0, 589874, 60, 0, 589875, 60, 0, 589876, 62, 0, 589877, 63, 0, 589878, 63, 0, 589879, 63, 0, 589880, 63, 0, 589881, 63, 0, 589882, 63, 0, 589883, 63, 0, 589884, 64, 0, 589895, 109, 0, 589896, 110, 0, 589897, 110, 0, 589898, 121, 0, 589899, 113, 0, 589900, 113, 0, 589901, 113, 0, 589902, 113, 0, 589903, 113, 0, 589904, 3, 0, 720895, 5, 0, 655360, 16, 0, 655361, 17, 0, 655362, 17, 0, 655363, 24, 0, 655364, 25, 0, 655365, 24, 0, 655366, 14, 0, 655367, 14, 0, 655368, 14, 0, 655369, 14, 0, 655370, 14, 0, 655371, 14, 0, 655372, 14, 0, 655373, 14, 0, 655374, 14, 0, 655375, 14, 0, 655376, 25, 0, 655377, 63, 0, 655378, 63, 0, 655379, 63, 0, 655380, 63, 0, 655384, 63, 0, 655385, 63, 0, 655386, 63, 0, 655387, 63, 0, 655388, 63, 0, 655389, 63, 0, 655390, 63, 0, 655391, 64, 0, 655396, 62, 0, 655397, 63, 0, 655398, 63, 0, 655399, 63, 0, 655400, 63, 0, 655401, 63, 0, 655402, 70, 0, 655403, 71, 0, 655404, 63, 0, 655405, 63, 0, 655406, 63, 0, 655407, 63, 0, 655408, 63, 0, 655409, 63, 0, 655410, 63, 0, 655411, 70, 0, 655412, 71, 0, 655413, 63, 0, 655414, 63, 0, 655415, 63, 0, 655416, 63, 0, 655417, 63, 0, 655418, 63, 0, 655419, 63, 0, 655420, 70, 0, 655421, 109, 0, 655422, 110, 0, 655423, 110, 0, 655424, 110, 0, 655425, 110, 0, 655426, 110, 0, 655427, 110, 0, 655428, 110, 0, 655429, 110, 0, 655430, 110, 0, 655431, 110, 0, 655432, 110, 0, 655433, 110, 0, 655434, 110, 0, 655435, 110, 0, 655436, 110, 0, 655437, 110, 0, 655438, 110, 0, 655439, 111, 0, 655440, 3, 0, 786431, 5, 0, 720896, 19, 0, 720897, 20, 0, 720898, 20, 0, 720899, 20, 0, 720900, 20, 0, 720901, 20, 0, 720902, 20, 0, 720903, 20, 0, 720904, 20, 0, 720905, 20, 0, 720906, 20, 0, 720907, 20, 0, 720908, 20, 0, 720909, 20, 0, 720910, 20, 0, 720911, 20, 0, 720912, 20, 0, 720913, 20, 0, 720914, 63, 0, 720915, 63, 0, 720916, 63, 0, 720920, 63, 0, 720921, 63, 0, 720922, 63, 0, 720923, 63, 0, 720924, 63, 0, 720925, 63, 0, 720926, 63, 0, 720927, 64, 0, 720932, 62, 0, 720933, 63, 0, 720934, 63, 0, 720935, 63, 0, 720936, 63, 0, 720937, 63, 0, 720938, 63, 0, 720939, 63, 0, 720940, 63, 0, 720941, 63, 0, 720942, 63, 0, 720943, 63, 0, 720944, 63, 0, 720945, 63, 0, 720946, 63, 0, 720947, 63, 0, 720948, 63, 0, 720949, 63, 0, 720950, 63, 0, 720951, 63, 0, 720952, 63, 0, 720953, 63, 0, 720954, 63, 0, 720955, 63, 0, 720956, 64, 0, 720957, 112, 0, 720958, 113, 0, 720959, 113, 0, 720960, 113, 0, 720961, 113, 0, 720962, 113, 0, 720963, 113, 0, 720964, 113, 0, 720965, 113, 0, 720966, 113, 0, 720967, 113, 0, 720968, 113, 0, 720969, 113, 0, 720970, 113, 0, 720971, 113, 0, 720972, 113, 0, 720973, 113, 0, 720974, 113, 0, 720975, 113, 0, 720976, 3, 0, 851967, 11, 0, 786432, 1, 0, 786433, 1, 0, 786434, 1, 0, 786435, 1, 0, 786436, 1, 0, 786437, 1, 0, 786438, 1, 0, 786439, 1, 0, 786440, 1, 0, 786441, 1, 0, 786442, 1, 0, 786443, 1, 0, 786444, 1, 0, 786445, 1, 0, 786446, 1, 0, 786447, 1, 0, 786448, 1, 0, 786449, 1, 0, 786450, 1, 0, 786451, 1, 0, 786452, 1, 0, 786456, 1, 0, 786457, 1, 0, 786458, 1, 0, 786459, 1, 0, 786460, 1, 0, 786461, 1, 0, 786462, 1, 0, 786463, 1, 0, 786464, 50, 0, 786465, 50, 0, 786466, 50, 0, 786467, 50, 0, 786468, 1, 0, 786469, 1, 0, 786470, 1, 0, 786471, 1, 0, 786472, 1, 0, 786473, 1, 0, 786474, 1, 0, 786475, 1, 0, 786476, 1, 0, 786477, 1, 0, 786478, 1, 0, 786479, 1, 0, 786480, 1, 0, 786481, 1, 0, 786482, 1, 0, 786483, 1, 0, 786484, 1, 0, 786485, 1, 0, 786486, 1, 0, 786487, 1, 0, 786488, 1, 0, 786489, 1, 0, 786490, 1, 0, 786491, 1, 0, 786492, 1, 0, 786493, 1, 0, 786494, 1, 0, 786495, 1, 0, 786496, 1, 0, 786497, 1, 0, 786498, 1, 0, 786499, 1, 0, 786500, 1, 0, 786501, 1, 0, 786502, 1, 0, 786503, 1, 0, 786504, 1, 0, 786505, 1, 0, 786506, 1, 0, 786507, 1, 0, 786508, 1, 0, 786509, 1, 0, 786510, 1, 0, 786511, 1, 0, 786512, 12, 0, 917503, 4, 0, 851968, 4, 0, 851969, 4, 0, 851970, 4, 0, 851971, 4, 0, 851972, 4, 0, 851973, 4, 0, 851974, 4, 0, 851975, 4, 0, 851976, 4, 0, 851977, 4, 0, 851978, 4, 0, 851979, 4, 0, 851980, 4, 0, 851981, 4, 0, 851982, 4, 0, 851983, 4, 0, 851984, 4, 0, 851985, 4, 0, 851986, 4, 0, 851987, 4, 0, 851988, 4, 0, 851989, 4, 0, 851990, 4, 0, 851991, 4, 0, 851992, 4, 0, 851993, 4, 0, 851994, 4, 0, 851995, 4, 0, 851996, 4, 0, 851997, 4, 0, 851998, 4, 0, 851999, 4, 0, 852000, 4, 0, 852001, 4, 0, 852002, 4, 0, 852003, 4, 0, 852004, 4, 0, 852005, 4, 0, 852006, 4, 0, 852007, 4, 0, 852008, 4, 0, 852009, 4, 0, 852010, 4, 0, 852011, 4, 0, 852012, 4, 0, 852013, 4, 0, 852014, 4, 0, 852015, 4, 0, 852016, 4, 0, 852017, 4, 0, 852018, 4, 0, 852019, 4, 0, 852020, 4, 0, 852021, 4, 0, 852022, 4, 0, 852023, 4, 0, 852024, 4, 0, 852025, 4, 0, 852026, 4, 0, 852027, 4, 0, 852028, 4, 0, 852029, 4, 0, 852030, 4, 0, 852031, 4, 0, 852032, 4, 0, 852033, 4, 0, 852034, 4, 0, 852035, 4, 0, 852036, 4, 0, 852037, 4, 0, 852038, 4, 0, 852039, 4, 0, 852040, 4, 0, 852041, 4, 0, 852042, 4, 0, 852043, 4, 0, 852044, 4, 0, 852045, 4, 0, 852046, 4, 0, 852047, 4, 0, 852048, 4, 0, 983039, 4, 0, 917504, 4, 0, 917505, 4, 0, 917506, 4, 0, 917507, 4, 0, 917508, 4, 0, 917509, 4, 0, 917510, 4, 0, 917511, 4, 0, 917512, 4, 0, 917513, 4, 0, 917514, 4, 0, 917515, 4, 0, 917516, 4, 0, 917517, 4, 0, 917518, 4, 0, 917519, 4, 0, 917520, 4, 0, 917521, 4, 0, 917522, 4, 0, 917523, 4, 0, 917524, 4, 0, 917525, 4, 0, 917526, 4, 0, 917527, 4, 0, 917528, 4, 0, 917529, 4, 0, 917530, 4, 0, 917531, 4, 0, 917532, 4, 0, 917533, 4, 0, 917534, 4, 0, 917535, 4, 0, 917536, 4, 0, 917537, 4, 0, 917538, 4, 0, 917539, 4, 0, 917540, 4, 0, 917541, 4, 0, 917542, 4, 0, 917543, 4, 0, 917544, 4, 0, 917545, 4, 0, 917546, 4, 0, 917547, 4, 0, 917548, 4, 0, 917549, 4, 0, 917550, 4, 0, 917551, 4, 0, 917552, 4, 0, 917553, 4, 0, 917554, 4, 0, 917555, 4, 0, 917556, 4, 0, 917557, 4, 0, 917558, 4, 0, 917559, 4, 0, 917560, 4, 0, 917561, 4, 0, 917562, 4, 0, 917563, 4, 0, 917564, 4, 0, 917565, 4, 0, 917566, 4, 0, 917567, 4, 0, 917568, 4, 0, 917569, 4, 0, 917570, 4, 0, 917571, 4, 0, 917572, 4, 0, 917573, 4, 0, 917574, 4, 0, 917575, 4, 0, 917576, 4, 0, 917577, 4, 0, 917578, 4, 0, 917579, 4, 0, 917580, 4, 0, 917581, 4, 0, 917582, 4, 0, 917583, 4, 0, 917584, 4, 0, 1048575, 4, 0, 983040, 4, 0, 983041, 4, 0, 983042, 4, 0, 983043, 4, 0, 983044, 4, 0, 983045, 4, 0, 983046, 4, 0, 983047, 4, 0, 983048, 4, 0, 983049, 4, 0, 983050, 4, 0, 983051, 4, 0, 983052, 4, 0, 983053, 4, 0, 983054, 4, 0, 983055, 4, 0, 983056, 4, 0, 983057, 4, 0, 983058, 4, 0, 983059, 4, 0, 983060, 4, 0, 983061, 4, 0, 983062, 4, 0, 983063, 4, 0, 983064, 4, 0, 983065, 4, 0, 983066, 4, 0, 983067, 4, 0, 983068, 4, 0, 983069, 4, 0, 983070, 4, 0, 983071, 4, 0, 983072, 4, 0, 983073, 4, 0, 983074, 4, 0, 983075, 4, 0, 983076, 4, 0, 983077, 4, 0, 983078, 4, 0, 983079, 4, 0, 983080, 4, 0, 983081, 4, 0, 983082, 4, 0, 983083, 4, 0, 983084, 4, 0, 983085, 4, 0, 983086, 4, 0, 983087, 4, 0, 983088, 4, 0, 983089, 4, 0, 983090, 4, 0, 983091, 4, 0, 983092, 4, 0, 983093, 4, 0, 983094, 4, 0, 983095, 4, 0, 983096, 4, 0, 983097, 4, 0, 983098, 4, 0, 983099, 4, 0, 983100, 4, 0, 983101, 4, 0, 983102, 4, 0, 983103, 4, 0, 983104, 4, 0, 983105, 4, 0, 983106, 4, 0, 983107, 4, 0, 983108, 4, 0, 983109, 4, 0, 983110, 4, 0, 983111, 4, 0, 983112, 4, 0, 983113, 4, 0, 983114, 4, 0, 983115, 4, 0, 983116, 4, 0, 983117, 4, 0, 983118, 4, 0, 983119, 4, 0, 983120, 4, 0, 1114111, 4, 0, 1048576, 4, 0, 1048577, 4, 0, 1048578, 4, 0, 1048579, 4, 0, 1048580, 4, 0, 1048581, 4, 0, 1048582, 4, 0, 1048583, 4, 0, 1048584, 4, 0, 1048585, 4, 0, 1048586, 4, 0, 1048587, 4, 0, 1048588, 4, 0, 1048589, 4, 0, 1048590, 4, 0, 1048591, 4, 0, 1048592, 4, 0, 1048593, 4, 0, 1048594, 4, 0, 1048595, 4, 0, 1048596, 4, 0, 1048597, 4, 0, 1048598, 4, 0, 1048599, 4, 0, 1048600, 4, 0, 1048601, 4, 0, 1048602, 4, 0, 1048603, 4, 0, 1048604, 4, 0, 1048605, 4, 0, 1048606, 4, 0, 1048607, 4, 0, 1048608, 4, 0, 1048609, 4, 0, 1048610, 4, 0, 1048611, 4, 0, 1048612, 4, 0, 1048613, 4, 0, 1048614, 4, 0, 1048615, 4, 0, 1048616, 4, 0, 1048617, 4, 0, 1048618, 4, 0, 1048619, 4, 0, 1048620, 4, 0, 1048621, 4, 0, 1048622, 4, 0, 1048623, 4, 0, 1048624, 4, 0, 1048625, 4, 0, 1048626, 4, 0, 1048627, 4, 0, 1048628, 4, 0, 1048629, 4, 0, 1048630, 4, 0, 1048631, 4, 0, 1048632, 4, 0, 1048633, 4, 0, 1048634, 4, 0, 1048635, 4, 0, 1048636, 4, 0, 1048637, 4, 0, 1048638, 4, 0, 1048639, 4, 0, 1048640, 4, 0, 1048641, 4, 0, 1048642, 4, 0, 1048643, 4, 0, 1048644, 4, 0, 1048645, 4, 0, 1048646, 4, 0, 1048647, 4, 0, 1048648, 4, 0, 1048649, 4, 0, 1048650, 4, 0, 1048651, 4, 0, 1048652, 4, 0, 1048653, 4, 0, 1048654, 4, 0, 1048655, 4, 0, 1048656, 4, 0 )
 
-[node name="FallingPlatform" parent="." instance=ExtResource( 18 )]
-position = Vector2( 536, 114 )
+[node name="FallingPlatform" parent="." instance=ExtResource( 11 )]
+position = Vector2( 450, 36 )
 
-[node name="FallingPlatform2" parent="." instance=ExtResource( 18 )]
+[node name="AppleItem" parent="FallingPlatform" instance=ExtResource( 12 )]
+position = Vector2( -58, -26 )
+
+[node name="KiwiItem" parent="FallingPlatform" instance=ExtResource( 14 )]
+position = Vector2( -16, -28 )
+
+[node name="MelonItem" parent="FallingPlatform" instance=ExtResource( 1 )]
+position = Vector2( 13, 40 )
+
+[node name="FallingPlatform2" parent="." instance=ExtResource( 11 )]
 position = Vector2( 165, 93 )
 
-[node name="MovingPlatform2" parent="." instance=ExtResource( 19 )]
-position = Vector2( 432, 82 )
-horizontal = false
+[node name="MovingPlatform2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 301, 81 )
 
-[node name="MovingPlatform" parent="." instance=ExtResource( 19 )]
+[node name="MovingPlatform" parent="." instance=ExtResource( 4 )]
 position = Vector2( 553, 71 )
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
+[node name="Player" parent="." instance=ExtResource( 8 )]
 position = Vector2( 64, 80 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -2805,7 +2812,7 @@ motion_mirroring = Vector2( 576, 0 )
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/sky"]
 position = Vector2( 0, -225 )
 scale = Vector2( 2, 2 )
-texture = ExtResource( 7 )
+texture = ExtResource( 21 )
 centered = false
 
 [node name="clouds" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -2815,7 +2822,7 @@ motion_mirroring = Vector2( 576, 0 )
 material = SubResource( 82 )
 position = Vector2( 0, -225 )
 scale = Vector2( 2, 2 )
-texture = ExtResource( 5 )
+texture = ExtResource( 22 )
 centered = false
 
 [node name="cloudCover" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -2825,7 +2832,7 @@ motion_mirroring = Vector2( 576, 0 )
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/cloudCover"]
 position = Vector2( 0, -225 )
 scale = Vector2( 2, 2 )
-texture = ExtResource( 6 )
+texture = ExtResource( 20 )
 centered = false
 
 [node name="hills" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -2835,7 +2842,7 @@ motion_mirroring = Vector2( 576, 0 )
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/hills"]
 position = Vector2( 0, -225 )
 scale = Vector2( 2, 2 )
-texture = ExtResource( 4 )
+texture = ExtResource( 19 )
 centered = false
 
 [node name="florest" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -2843,15 +2850,15 @@ motion_scale = Vector2( 0.8, 1 )
 motion_mirroring = Vector2( 576, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/florest"]
-position = Vector2( 0, -225 )
+position = Vector2( -14, -206 )
 scale = Vector2( 2, 2 )
-texture = ExtResource( 2 )
+texture = ExtResource( 18 )
 centered = false
 
 [node name="fall-zone" type="Area2D" parent="."]
 position = Vector2( 496, 192 )
 collision_layer = 8
-script = ExtResource( 8 )
+script = ExtResource( 16 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -2860,80 +2867,76 @@ __meta__ = {
 position = Vector2( 48, 8 )
 shape = SubResource( 83 )
 
+[node name="fall-zone2" type="Area2D" parent="."]
+position = Vector2( 313, 192 )
+collision_layer = 8
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fall-zone2"]
+position = Vector2( 48, 8 )
+shape = SubResource( 83 )
+
 [node name="FruitsItens" type="Node2D" parent="."]
 
-[node name="AppleItem" parent="FruitsItens" instance=ExtResource( 9 )]
+[node name="AppleItem" parent="FruitsItens" instance=ExtResource( 12 )]
 position = Vector2( 272, 128 )
 fruits = 2
 
-[node name="AppleItem2" parent="FruitsItens" instance=ExtResource( 9 )]
+[node name="AppleItem2" parent="FruitsItens" instance=ExtResource( 12 )]
 position = Vector2( 320, 128 )
 fruits = 3
 
-[node name="AppleItem3" parent="FruitsItens" instance=ExtResource( 9 )]
+[node name="AppleItem3" parent="FruitsItens" instance=ExtResource( 12 )]
 position = Vector2( 352, 128 )
 
-[node name="AppleItem4" parent="FruitsItens" instance=ExtResource( 9 )]
+[node name="AppleItem4" parent="FruitsItens" instance=ExtResource( 12 )]
 position = Vector2( 400, 128 )
 
-[node name="BananaItem" parent="FruitsItens" instance=ExtResource( 10 )]
+[node name="BananaItem" parent="FruitsItens" instance=ExtResource( 2 )]
 position = Vector2( 464, 128 )
 
-[node name="CherryItem" parent="FruitsItens" instance=ExtResource( 11 )]
+[node name="CherryItem" parent="FruitsItens" instance=ExtResource( 13 )]
 position = Vector2( 432, 128 )
 
-[node name="KiwiItem" parent="FruitsItens" instance=ExtResource( 12 )]
+[node name="KiwiItem" parent="FruitsItens" instance=ExtResource( 14 )]
 position = Vector2( 496, 48 )
 
-[node name="KiwiItem2" parent="FruitsItens" instance=ExtResource( 12 )]
+[node name="KiwiItem2" parent="FruitsItens" instance=ExtResource( 14 )]
 position = Vector2( 608, 128 )
 
-[node name="AppleItem5" parent="FruitsItens" instance=ExtResource( 13 )]
+[node name="AppleItem5" parent="FruitsItens" instance=ExtResource( 1 )]
 position = Vector2( 352, 64 )
 
-[node name="AppleItem6" parent="FruitsItens" instance=ExtResource( 13 )]
+[node name="AppleItem6" parent="FruitsItens" instance=ExtResource( 1 )]
 position = Vector2( 672, 128 )
 
-[node name="OrangeItem" parent="FruitsItens" instance=ExtResource( 14 )]
+[node name="OrangeItem" parent="FruitsItens" instance=ExtResource( 15 )]
 position = Vector2( 720, 128 )
 
-[node name="PineappleItem" parent="FruitsItens" instance=ExtResource( 15 )]
-position = Vector2( 16, 128 )
+[node name="Mushroom" parent="." instance=ExtResource( 10 )]
+position = Vector2( 227, 125 )
 
-[node name="PineappleItem2" parent="FruitsItens" instance=ExtResource( 15 )]
-position = Vector2( 32, 128 )
-
-[node name="PineappleItem3" parent="FruitsItens" instance=ExtResource( 15 )]
-position = Vector2( 48, 128 )
-
-[node name="StrawberryItem" parent="FruitsItens" instance=ExtResource( 16 )]
-position = Vector2( 80, 128 )
-
-[node name="StrawberryItem2" parent="FruitsItens" instance=ExtResource( 16 )]
-position = Vector2( 112, 144 )
-
-[node name="StrawberryItem3" parent="FruitsItens" instance=ExtResource( 16 )]
-position = Vector2( 240, 144 )
-
-[node name="Mushroom" parent="." instance=ExtResource( 17 )]
-position = Vector2( 324, 54.3323 )
-
-[node name="Mushroom2" parent="." instance=ExtResource( 17 )]
+[node name="Mushroom2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 833, 84.3323 )
 
-[node name="HUD" parent="." instance=ExtResource( 21 )]
-
-[node name="goal" parent="." instance=ExtResource( 23 )]
-position = Vector2( 1263, 65 )
-path = "res://Levels/Level_02.tscn"
+[node name="HUD" parent="." instance=ExtResource( 9 )]
 
 [node name="Checkpoints" type="Node2D" parent="."]
 
-[node name="checkpoint" parent="Checkpoints" instance=ExtResource( 22 )]
+[node name="checkpoint" parent="Checkpoints" instance=ExtResource( 3 )]
 position = Vector2( 900, 65 )
 
-[node name="Transition_In" parent="." instance=ExtResource( 24 )]
+[node name="goal" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1263, 65 )
+
+[node name="Transition_In" parent="." instance=ExtResource( 5 )]
+
+[node name="Transition_Out" parent="." instance=ExtResource( 6 )]
 
 [connection signal="body_entered" from="fall-zone" to="fall-zone" method="_on_fallzone_body_entered"]
+[connection signal="body_entered" from="fall-zone2" to="fall-zone2" method="_on_fallzone_body_entered"]
 
 [editable path="HUD"]
