@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Main Characters/Virtual Guy/Idle (32x32).png" type="Texture" id=2]
@@ -276,10 +276,13 @@ tracks/2/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 10, 11.5 )
+extents = Vector2( 10, 9.5 )
 
 [sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 11, 9.25 )
+extents = Vector2( 11, 8 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 10, 2 )
 
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 24
@@ -309,8 +312,7 @@ anims/jump = SubResource( 4 )
 anims/run = SubResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2( 0, -11.5 )
+position = Vector2( 0, -9.5 )
 shape = SubResource( 3 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
@@ -339,17 +341,15 @@ drag_margin_bottom = 0.3
 editor_draw_screen = false
 
 [node name="Area2DHurtBox" type="Area2D" parent="."]
-visible = false
 modulate = Color( 128.498, 0.0196078, 0, 1 )
 position = Vector2( 0, -9 )
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DHurtBox"]
-position = Vector2( 0, -6 )
+position = Vector2( 0, -2 )
 shape = SubResource( 8 )
 
 [node name="colissions_knockback" type="Node2D" parent="."]
-visible = false
 
 [node name="left" type="RayCast2D" parent="colissions_knockback"]
 position = Vector2( 0, -12 )
@@ -363,4 +363,12 @@ enabled = true
 cast_to = Vector2( 16, 0 )
 collision_mask = 2
 
+[node name="head-collider" type="Area2D" parent="."]
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="head-collider"]
+position = Vector2( 0, -22 )
+shape = SubResource( 14 )
+
 [connection signal="body_entered" from="Area2DHurtBox" to="." method="_on_Area2DHurtBox_body_entered"]
+[connection signal="body_entered" from="head-collider" to="." method="_on_headcollider_body_entered"]

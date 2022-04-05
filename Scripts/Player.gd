@@ -99,3 +99,8 @@ func _on_Area2DHurtBox_body_entered(body):
 
 func hit_checkpoint():
 	Global.checkopoint_pos = position.x
+
+
+func _on_headcollider_body_entered(body):
+	if body.has_method("destroy"):
+		body.destroy()

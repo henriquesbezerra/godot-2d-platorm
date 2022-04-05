@@ -4,10 +4,10 @@ onready var changer = get_parent().get_node("Transition_In")
 
 export var path : String 
 
-func _ready():
-	print(path)
-	pass
-
+#func _ready():
+#	print(path)
+#	pass
+#
 
 func _on_goal_body_entered(body):
 	if body.name == "Player":
